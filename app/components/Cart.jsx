@@ -1,0 +1,104 @@
+"use client"
+import React, { useRef } from 'react';
+import Link from 'next/link';
+import { AiOutlineMinus, AiOutlinePlus, AiOutlineLeft, AiOutlineShopping } from 'react-icons/ai';
+import { FaTrash } from 'react-icons/fa6';
+// import toast from 'react-hot-toast';
+
+import { useStateContext } from '../context/StateContext';
+import { urlForImage } from '@/sanity/lib/image';
+import styles from '../page.module.css';
+// import getStripe from '../lib/getStripe';
+// import { urlFor } from '../lib/client'; 
+// import getStripe from '../lib/getStripe';
+
+const Cart = () => {
+  const cartRef = useRef();
+  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove } = useStateContext();
+
+  const handleCheckout = async () => {
+    
+  }
+
+  return (
+    <div className={styles.cart_wrapper} ref={cartRef}>
+      <div className={styles.cart_container}>
+        <div
+        className={styles.cart_heading}
+        onClick={() => setShowCart(false)}>
+          <AiOutlineLeft />
+          <h3 className={styles.heading}>Your Cart</h3>
+          <h3 className={styles.cart_num_items}>({totalQuantities} items)</h3>
+        </div>
+
+        {cartItems.length < 1 && (
+          <div className={styles.empty_cart}>
+            <AiOutlineShopping size={150} />
+            <h3>Your shopping bag is empty</h3>
+            <Link href="/">
+              <div
+                onClick={() => setShowCart(false)}
+                className={styles.resume_shop_btn}
+              >
+                Continue Shopping
+              </div>
+            </Link>
+          </div>
+        )}
+
+        <div className={styles.product_container_cart}>
+          {cartItems.length >= 1 && cartItems?.map((item) => (
+            <div className={styles.product_cart} key={item._id}>
+              <img src={urlForImage(item?.image[0])} className={styles.cart_product_image} />
+              <div className={styles.item_desc}>
+                <div className={styles.cart_head}>
+                  <h5 className={styles.cart_name}>{item?.name}</h5>
+                  <button
+                    type="button"
+                    className={styles.remove_item}
+                    onClick={() => onRemove(item)}
+                  >
+                    <FaTrash />
+                  </button> 
+                </div>
+                <div className={styles.cart_size}>{item?.selectedSize}</div>
+                <div >
+                  <div className={styles.cart_qty_price}>
+                  <div className={styles.cart_desc}>
+                    <span className={styles.minus} onClick={() => toggleCartItemQuanitity(item._id, item.selectedSize, 'dec') }>
+                    <AiOutlineMinus />
+                    </span>
+                    <button className={styles.num} onClick="">{item?.quantity}</button>
+                    <span className={styles.plus} onClick={() => toggleCartItemQuanitity(item._id, item.selectedSize, 'inc') }><AiOutlinePlus /></span>
+                  </div>
+                  <h4 className={styles.cart_price}>${item?.price}</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        {cartItems.length >= 1 && (
+          <div className={styles.cart_bottom}>
+            <div className={styles.total}>
+              <h3>Subtotal:</h3>
+              <h3>${totalPrice}</h3>
+            </div>
+            <div className={styles.btn_container}>
+              {/* <Link href="/client_details"> */}
+              <div  className={styles.order_btn} >
+                Complete Order
+              </div>
+              {/* </Link> */}
+              {/* <button type="button" className={styles.btn" onClick={() => handleCheckout()}>
+                Pay with Stripe
+              </button> */}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
+
+export default Cart
