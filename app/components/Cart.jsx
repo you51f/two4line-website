@@ -9,12 +9,15 @@ import { useStateContext } from '../context/StateContext';
 import { urlForImage } from '@/sanity/lib/image';
 import styles from '../page.module.css';
 import Image from 'next/image';
+import imageUrlBuilder from "@sanity/image-url";
+import { client } from '@/sanity/lib/client';
 // import getStripe from '../lib/getStripe';
 // import { urlFor } from '../lib/client'; 
 // import getStripe from '../lib/getStripe';
 
 const Cart = () => {
   const cartRef = useRef();
+  const builder = imageUrlBuilder(client);
   const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove } = useStateContext();
 
   const handleCheckout = async () => {
@@ -51,8 +54,8 @@ const Cart = () => {
           {cartItems.length >= 1 && cartItems?.map((item) => (
             <div className={styles.product_cart} key={item._id}>
               <Image  
-          src={urlForImage(item?.image[0])} className={styles.cart_product_image} alt={image[0]?.alt} width={180}
-          height={140}  />
+          src={builder.image(item?.image[0]).width(513).height(515).url()} className={styles.cart_product_image} alt={item?.image[0]?.alt} width={100}
+          height={90}  />
               <div className={styles.item_desc}>
                 <div className={styles.cart_head}>
                   <h5 className={styles.cart_name}>{item?.name}</h5>

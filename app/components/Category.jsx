@@ -12,11 +12,11 @@ const Category = ({category: { _id, image, name, slug }}) => {
     // <div className={styles.category}>
         <Link href={`/category/${slug?.current}`}>
           <Image 
-            src={builder.image(image).width(950).height(820).url()}
+            src={builder.image(image).width(525).height(515).url()}
             className={styles.category_box}
-            width={950}
-            height={820} 
-          alt={image[0]?.alt}
+            width={525}
+            height={515} 
+          alt={image[0]?.alt} 
             />
         </Link>
     // </div>
