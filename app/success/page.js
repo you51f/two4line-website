@@ -12,7 +12,7 @@ const Success = () => {
     setCartItems([]);
     setTotalPrice(0);
     setTotalQuantities(0);
-  },[])
+  },[setCartItems, setTotalPrice, setTotalQuantities])
   return (
     <div className={styles.success_wrapper}>
       <div className={styles.success}>

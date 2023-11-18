@@ -3,6 +3,7 @@ import styles from '../page.module.css'
 import imageUrlBuilder from "@sanity/image-url";
 import { client } from '@/sanity/lib/client';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Design = ({design: { _id, image, name, slug }, categorySlug, collectionSlug}) => {
   const builder = imageUrlBuilder(client); 
@@ -11,10 +12,12 @@ const Design = ({design: { _id, image, name, slug }, categorySlug, collectionSlu
         <div className={styles.design_box}>
           {/* <img className={styles.design_image}/> */}
           {image[0] ? (
-            <img
+            <Image
             src={builder.image(image && image[0]).width(435).height(438).url()} 
             className={styles.design_image}
-            alt={image[0]?.alt}
+            width={435}
+            height={438} 
+          alt={image[0]?.alt}
             />
           ) : null}
           <div className={styles.design_name}>{name}</div>

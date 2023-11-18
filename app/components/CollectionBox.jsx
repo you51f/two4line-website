@@ -3,6 +3,7 @@ import styles from '../page.module.css';
 import imageUrlBuilder from "@sanity/image-url";
 import { client } from '@/sanity/lib/client';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const CollectionBox = ({ collection: { _id, image, name, slug }, categorySlug, index }) => {
   const builder = imageUrlBuilder(client);
@@ -12,9 +13,11 @@ const CollectionBox = ({ collection: { _id, image, name, slug }, categorySlug, i
   return (
     <div className={styles.collection_box}>
       {image[0] ? (
-        <img
+        <Image
           src={builder.image(image && image[0]).width(435).height(438).url()}
           className={styles.collection_image}
+          width={435}
+            height={438} 
           alt={image[0]?.alt}
         />
       ) : null}

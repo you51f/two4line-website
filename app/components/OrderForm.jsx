@@ -45,7 +45,7 @@ const OrderForm = ({fetchedVouchers}) => {
 
   useEffect(() => {
     setShowCart(false)
-  }, [])
+  }, [setShowCart])
 
 
   const handleChange = (e) => {

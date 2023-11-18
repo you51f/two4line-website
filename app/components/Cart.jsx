@@ -49,7 +49,9 @@ const Cart = () => {
         <div className={styles.product_container_cart}>
           {cartItems.length >= 1 && cartItems?.map((item) => (
             <div className={styles.product_cart} key={item._id}>
-              <img src={urlForImage(item?.image[0])} className={styles.cart_product_image} />
+              <Image  
+          src={urlForImage(item?.image[0])} className={styles.cart_product_image} alt={image[0]?.alt} width={180}
+          height={140}  />
               <div className={styles.item_desc}>
                 <div className={styles.cart_head}>
                   <h5 className={styles.cart_name}>{item?.name}</h5>

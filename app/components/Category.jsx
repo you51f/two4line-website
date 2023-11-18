@@ -3,6 +3,7 @@ import styles from '../page.module.css';
 import imageUrlBuilder from "@sanity/image-url";
 import { client } from '@/sanity/lib/client';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Category = ({category: { _id, image, name, slug }}) => {
   // const cat = category
@@ -10,9 +11,13 @@ const Category = ({category: { _id, image, name, slug }}) => {
   return (
     // <div className={styles.category}>
         <Link href={`/category/${slug?.current}`}>
-          <img 
+          <Image 
             src={builder.image(image).width(950).height(820).url()}
-            className={styles.category_box}/>
+            className={styles.category_box}
+            width={950}
+            height={820} 
+          alt={image[0]?.alt}
+            />
         </Link>
     // </div>
   )

@@ -6,6 +6,7 @@ import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-
 import { useStateContext } from '../context/StateContext';
 import { urlForImage } from '@/sanity/lib/image';
 import styles from '../../app/page.module.css';
+import Image from 'next/image';
 
 
 
@@ -41,20 +42,25 @@ const Product = ({product}) => {
         <div className={styles.product_detail_container}>
         <div>
           <div className={styles.image_container}>
-            <img
+            <Image
              src={urlForImage(image[index])} 
              
             className={styles.product_detail_image}
-            alt={image[0]?.alt}
+            width={300}
+            height={300} 
+          alt={image[0]?.alt}
               />
           </div>
           <div className={styles.small_images_container}>
             {image?.map((item, i) => (
-              <img 
+              <Image 
                 key={i}
                 src={builder.image(item).width(300).height(300).url()}
                 className={i === index ? `${styles.small_image}  ${styles.selected_image}` : styles.small_image}
                 onMouseEnter={() => setIndex(i)}
+                width={300}
+            height={300} 
+          alt={image[0]?.alt}
               />
             ))}
           </div>
