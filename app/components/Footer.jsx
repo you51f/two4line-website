@@ -5,6 +5,7 @@ import { AiOutlineInstagram } from 'react-icons/ai';
 import { AiFillFacebook } from 'react-icons/ai';
 import { FaXTwitter } from 'react-icons/fa6';
 import { BiLogoTiktok } from 'react-icons/bi';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -16,17 +17,15 @@ const Footer = () => {
                     <div className={styles.footer_pages}>
                         <div className={styles.footer_pages_title}>Pages</div>
                         <div className={styles.footer_pages_items}>
-                            <ul>Home</ul>
-                            <ul>Catalog</ul>
-                            <ul>Contact</ul>
-                            <ul>About</ul>
+                        <Link href={'/'}><ul>Home</ul></Link>
+                        <Link href={'/catalog'}><ul>Catalog</ul></Link>
+                        <Link href={'/about-us'}><ul>About</ul></Link>
                         </div>
                     </div>
                     <div className={styles.footer_policies}>
                     <div className={styles.footer_pages_title2}>Policies</div>
                         <div className={styles.footer_pages_items}>
-                            <ul>Exchange Policy</ul>
-                            <ul>Refund Policy</ul>
+                            <Link href={'/exchange-refund-policy'}><ul>Exchange & Refund</ul></Link>
                             
                         </div>
                     </div>

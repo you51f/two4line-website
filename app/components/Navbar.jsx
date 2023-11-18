@@ -21,13 +21,12 @@ const Navbar = () => {
           <button onClick={() => setIsOpen(true)} className={styles.navbar_burger}>
             <BiMenuAltLeft className={styles.navbar_cart} />
           </button>
-          <div className={styles.navbar_logo}></div>
+          <Link href={'/'}><div className={styles.navbar_logo}></div></Link>
           <div className={styles.navbar_right}>
             <div className={styles.navbar_list}>
               <Link href={'/'}><ul>Home</ul></Link>
               <Link href={'/catalog'}><ul>Catalog</ul></Link>
-              <Link href={'/'}><ul>Contact</ul></Link>
-              <Link href={'/'}><ul>About</ul></Link>
+              <Link href={'/about-us'}><ul>About</ul></Link>
               {/* <ul>Catalog</ul>
               <ul>Contact</ul>
               <ul>About</ul> */}
