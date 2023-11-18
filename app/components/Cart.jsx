@@ -8,6 +8,7 @@ import { FaTrash } from 'react-icons/fa6';
 import { useStateContext } from '../context/StateContext';
 import { urlForImage } from '@/sanity/lib/image';
 import styles from '../page.module.css';
+import Image from 'next/image';
 // import getStripe from '../lib/getStripe';
 // import { urlFor } from '../lib/client'; 
 // import getStripe from '../lib/getStripe';

@@ -12,7 +12,7 @@ import Image from 'next/image';
 
 
 const Product = ({product}) => {
-  const { image, name, details, price, category, sizes, selectedSize } = product;
+  const { _id, image, name, details, price, category, sizes, selectedSize } = product;
     const builder = imageUrlBuilder(client);
     const [index, setIndex] = useState(0);
     const [sizeIndex, setSizeIndex] = useState(0);
@@ -44,7 +44,7 @@ const Product = ({product}) => {
           <div className={styles.image_container}>
             <Image
              src={urlForImage(image[index])} 
-             
+             key={_id}
             className={styles.product_detail_image}
             width={300}
             height={300} 
