@@ -81,7 +81,7 @@ const Product = ({product}) => {
             {
             sizes?.map((item, i) => {
               sizeNum = 1
-              return <option value={i}>{item.size}</option>
+              return <option key={i} value={i}>{item.size}</option>
               // <button key={i} onClick={() => {setSizeIndex(i)}}>{item.size}</button>
             })
           }
