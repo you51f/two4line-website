@@ -22,7 +22,16 @@ export default async function CollectionList ({params})  {
       <Navbar/> 
       <Rope category={categorySlug} collection={collectionSlug}/>
       <Title text={`Collections List`}/>
-      <Products collectionsBox={collections} collectionSlug={collectionSlug} categorySlug={categorySlug}/>
+      {/* <Products collectionsBox={collections} collectionSlug={collectionSlug} categorySlug={categorySlug}/> */}
+      <div className={collections.length != 1 ? styles.designs : styles.designs_one}>
+        {collections?.map((collection, index) => {
+          return (
+            
+              <Design key={collection._id} design={collection} categorySlug={categorySlug} collectionSlug={collectionSlug}/>
+        
+          )
+         })} 
+      </div>
       <Footer/>
     </div>
   )

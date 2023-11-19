@@ -32,7 +32,16 @@ export default async function CollectionsMain ({ params }) {
       <Navbar/> 
       <Rope category={categorySlug}/>
       <Title text={`Collections`}/>
-      <Collections collectionsBox={collections} categorySlug={categorySlug}/>
+      {/* <Collections collectionsBox={collections} categorySlug={categorySlug}/> */}
+      <div className={styles.collection}>
+        {collections?.map((collection, index) => {
+          return (
+            
+              <CollectionBox key={collection._id} collection={collection} categorySlug={categorySlug} index={index}/>
+            
+          )
+        })} 
+      </div>
       <Footer/>
     </div>
   )

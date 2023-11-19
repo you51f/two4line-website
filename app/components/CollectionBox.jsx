@@ -4,6 +4,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import { client } from '@/sanity/lib/client';
 import Link from 'next/link';
 import Image from 'next/image';
+import { AnimatedBox } from './index';
 
 const CollectionBox = ({ collection: { _id, image, name, slug }, categorySlug, index }) => {
   const builder = imageUrlBuilder(client);
@@ -11,7 +12,8 @@ const CollectionBox = ({ collection: { _id, image, name, slug }, categorySlug, i
   const collectionInfoClass = isEven ? styles.collection_info : styles.collection_info2;
 
   return (
-    <div className={styles.collection_box}>
+    <AnimatedBox className={styles.animate_box}>
+      <div className={styles.collection_box}>
       {image[0] ? (
         <Image
           src={builder.image(image && image[0]).width(435).height(438).url()}
@@ -42,6 +44,8 @@ const CollectionBox = ({ collection: { _id, image, name, slug }, categorySlug, i
         </Link>
       </div>
     </div>
+    </AnimatedBox>
+    
   );
 };
 

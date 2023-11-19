@@ -13,7 +13,14 @@ export default async function Home() {
       <Navbar/>
       <Banner/>
       <Title text={'Categories'}/>
-      <Categories categoriesBox={categories}/>
+      {/* <Categories categoriesBox={categories}/> */}
+      <div className={styles.category}>
+        {categories?.map((category, index) => {
+          return (
+            <Category key={category._id} category={category}/> 
+          )
+        })} 
+      </div> 
       <Footer/>
     </div>
   )

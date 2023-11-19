@@ -13,9 +13,7 @@ useEffect(() => {
     <div className={styles.category}>
         {categories?.map((category, index) => {
           return (
-            <AnimatedBox key={category._id} className={styles.animate_box}>
-              <Category category={category}/>
-            </AnimatedBox>
+            <Category category={category}/> 
           )
         })} 
       </div> 

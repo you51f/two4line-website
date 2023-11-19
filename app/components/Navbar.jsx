@@ -1,5 +1,5 @@
 "use client"
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../page.module.css';
 import { MdOutlineShoppingCart } from 'react-icons/md';
 import { BiMenuAltLeft } from 'react-icons/bi';
@@ -10,16 +10,22 @@ import Link from 'next/link';
 
 const Navbar = () => {
   const { isOpen, setIsOpen, showCart, setShowCart, totalQuantities  } = useStateContext();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleMenuToggle = () => {
     setIsOpen(!isOpen);
+    setIsMenuOpen(!isMenuOpen);
   };
   
   return (
     <div>
       <div className={styles.navbar}>
         <div className={styles.navbar_items}>
-          <button onClick={() => setIsOpen(true)} className={styles.navbar_burger}>
-            <BiMenuAltLeft className={styles.navbar_cart} />
+          <button onClick={handleMenuToggle} className={styles.navbar_burger}>
+          {isMenuOpen ? (
+    <RxCross2 className={styles.menu_btn} /> 
+  ) : (
+    <BiMenuAltLeft className={styles.navbar_cart} />
+  )}
           </button>
           <Link href={'/'}><div className={styles.navbar_logo}></div></Link>
           <div className={styles.navbar_right}>
@@ -45,10 +51,9 @@ const Navbar = () => {
         <div className={`${styles.side_menu} ${isOpen ? styles.show : ''}`}>
           <button className={styles.navbar_cart_btn} onClick={handleMenuToggle}><RxCross2 className={styles.menu_btn}/></button>
           <div className={styles.menu_list}>
-            <ul>Home</ul>
-            <ul>Catalog</ul>
-            <ul>Contact</ul>
-            <ul>About</ul>
+          <Link href={'/'}><ul onClick={handleMenuToggle}>Home</ul></Link>
+              <Link href={'/catalog'}><ul onClick={handleMenuToggle}>Catalog</ul></Link>
+              <Link href={'/about-us'}><ul onClick={handleMenuToggle}>About</ul></Link>
           </div>
         </div>
         {showCart && <Cart />}

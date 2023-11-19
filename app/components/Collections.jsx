@@ -13,9 +13,9 @@ useEffect(() => {
     <div className={styles.collection}>
         {collections?.map((collection, index) => {
           return (
-            <AnimatedBox key={collection._id} className={styles.animate_box}>
+            
               <CollectionBox key={collection._id} collection={collection} categorySlug={categorySlug} index={index}/>
-            </AnimatedBox>
+            
           )
         })} 
       </div>
