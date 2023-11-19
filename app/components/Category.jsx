@@ -18,7 +18,7 @@ const Category = ({category: { _id, image, name, slug }}) => {
             className={styles.category_box}
             width={525}
             height={515} 
-          alt={image[0]?.alt}
+          alt={image.alt}
           loading="lazy" 
             />
         </Link>

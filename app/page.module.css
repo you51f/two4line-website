@@ -108,8 +108,9 @@
   align-items: center;
   justify-content: space-between;
   margin-right: 8vw;
+  list-style: none;
 }
-.navbar_list ul {
+.navbar_list li {
   margin-right: 2.5vw;
   /* color: #000000; */
   font-size: 18px;
@@ -117,7 +118,7 @@
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
-.navbar_list ul:hover {
+.navbar_list li:hover {
   transform: scale(1.2);
 }
 .navbar_cart {
@@ -230,15 +231,16 @@
     align-items: center;
     flex-direction: column;
     height: 100%;
+    list-style: none;
 }
-.menu_list ul {
+.menu_list li {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 25px;
   transition: transform 0.2s ease-in-out;
   cursor: pointer;
 }
-.menu_list ul:hover {
+.menu_list li:hover {
   transform: scale(1.2);
 }
 
@@ -461,27 +463,29 @@
 .footer_evo_text {
   font-size: 18px;
   text-align: center;
+  list-style: none;
 }
 
-.footer_pages_items ul {
+.footer_pages_items li {
   font-size: 22px;
   margin: 10px 0;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
-.footer_pages_items ul:hover {
+.footer_pages_items li:hover {
   transform: scale(1.2);
 }
 .footer_pages_items {
   margin: 10px 0;
+  list-style: none;
 }
-.footer_social_items ul {
+.footer_social_items li {
   font-size: 28px;
   margin-right: 30px;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
-.footer_social_items ul:hover {
+.footer_social_items li:hover {
   transform: scale(1.2);
 }
 .footer_email {
@@ -500,6 +504,7 @@
   align-items: center;
   flex-direction: row;
   margin: 20px 0;
+  list-style: none;
 }
 
 .animate {
@@ -1698,14 +1703,14 @@ padding: 10px 10px;
   flex-direction: column;
 }
 
-.footer_pages_items ul {
+.footer_pages_items li {
   font-size: 18px; 
   margin-right: 30px;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
 
-.footer_social_items ul {
+.footer_social_items li {
   font-size: 22px; 
   margin-right: 30px;
   cursor: pointer;
