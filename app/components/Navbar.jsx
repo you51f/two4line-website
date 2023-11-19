@@ -24,7 +24,7 @@ const Navbar = () => {
           {isMenuOpen ? (
     <RxCross2 className={styles.menu_btn} /> 
   ) : (
-    <BiMenuAltLeft className={styles.navbar_cart} />
+    <BiMenuAltLeft className={styles.menu_btn} />
   )}
           </button>
           <Link href={'/'}><div className={styles.navbar_logo}></div></Link>
