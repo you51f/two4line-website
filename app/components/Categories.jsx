@@ -14,6 +14,8 @@ useEffect(() => {
         {categories?.map((category, index) => {
           return (
             <Category key={category._id} category={category}/> 
+            // <Category key={category._id} category={category}/> 
+            // <Category key={category._id} category={category}/> 
           )
         })} 
       </div> 
