@@ -19,16 +19,21 @@ const CollectionBox = ({ collection: { _id, image, name, slug }, categorySlug, i
           width={435}
             height={438} 
           alt={image[0]?.alt}
+          loading="lazy" 
         />
       ) : null}
       <div className={collectionInfoClass}>
         <div className={styles.collection_name}>{name}</div>
         <div className={styles.collection_small_image_box}>
           {image?.slice(1, 4).map((item, i) => (
-            <img
+            <Image
               key={i}
               src={builder.image(item).width(435).height(438).url()}
               className={styles.collection_small_image}
+              width={435}
+            height={438} 
+          alt={item?.alt}
+          loading="lazy"
             />
           ))}
         </div>

@@ -55,7 +55,7 @@ const Cart = () => {
             <div className={styles.product_cart} key={item._id}>
               <Image  
           src={builder.image(item?.image[0]).width(513).height(515).url()} className={styles.cart_product_image} alt={item?.image[0]?.alt} width={100}
-          height={90}  />
+          height={90}  loading="lazy" />
               <div className={styles.item_desc}>
                 <div className={styles.cart_head}>
                   <h5 className={styles.cart_name}>{item?.name}</h5>

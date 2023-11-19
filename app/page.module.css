@@ -271,7 +271,7 @@
 .banner_logo { 
   width: 30%;
   height: 80%;
-  background-image: url(/images/banner_logo.webp);
+  /* background-image: url(/images/banner_logo.webp); */
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -376,7 +376,7 @@
   margin-top: 10px;
 }
 .footer_evo_logo {
-  background-image: url(/images/evo_logo.webp);
+  background-image: url(/images/evo_logo.png);
   width: 64px;
   height: 28px;
   margin-left: 10px;

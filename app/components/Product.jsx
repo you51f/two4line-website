@@ -49,6 +49,7 @@ const Product = ({product}) => {
             width={513}
             height={515} 
           alt={image[index]?.alt}
+          loading="lazy"
               />
           </div>
           <div className={styles.small_images_container}>
@@ -61,6 +62,7 @@ const Product = ({product}) => {
                 width={513}
             height={515} 
           alt={item?.alt}
+          loading="lazy"
               />
             ))}
           </div>
