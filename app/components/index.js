@@ -12,7 +12,6 @@ export { default as Product } from "./Product";
 export { default as Design } from "./Design";
 export { default as Cart } from "./Cart";
 export { default as OrderForm } from "./OrderForm";
-export { default as LazyImage } from "./LazyImage";
 export { default as Collections } from "./Collections";
 export { default as Categories } from "./Categories";
 export { default as Products } from "./Products";
