@@ -151,14 +151,7 @@ const OrderForm = ({fetchedVouchers}) => {
                 style={{ height: '250px' }}
               />
             </div>
-            <div className={styles.order_policy}>
-              <label className={styles.input_checkbox}>
-                  <input type="checkbox" id="policyChecked" name="policyChecked" checked={formData.policyChecked} onChange={handleChange} required />
-                  <div>
-                      I have read and agree to the <Link className={styles.policy_link} href={"/exchange-refund-policy"}>Exchange & Refund policy</Link>.
-                  </div>
-              </label>
-            </div>
+            
             <div>
               <label htmlFor="voucher">Voucher:</label>
               <div className={styles.voucher}>
@@ -182,6 +175,14 @@ const OrderForm = ({fetchedVouchers}) => {
             </div>
             <div>
               <label htmlFor="totalPrice">Total: ${newTotal} EGP</label>
+            </div>
+            <div className={styles.order_policy}>
+              <label className={styles.input_checkbox}>
+                  <input type="checkbox" id="policyChecked" name="policyChecked" checked={formData.policyChecked} onChange={handleChange} required />
+                  <div>
+                      I have read and agree to the <Link className={styles.policy_link} href={"/exchange-refund-policy"}>Exchange & Refund policy</Link>.
+                  </div>
+              </label>
             </div>
             <button type="submit" className={styles.order_send_btn}>
               Order
