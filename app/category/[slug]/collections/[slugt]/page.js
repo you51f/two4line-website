@@ -1,5 +1,5 @@
 import React from 'react'
-import { AnimatedBox, CollectionBox, Design, Footer, Navbar, Product, Rope, Title } from '@/app/components';
+import { AnimatedBox, Products, Design, Footer, Navbar, Product, Rope, Title } from '@/app/components';
 import { sanityFetch } from '@/sanity/lib/sanityFetch';
 import imageUrlBuilder from "@sanity/image-url";
 import styles from '../../../../../app/page.module.css';
@@ -22,15 +22,7 @@ export default async function CollectionList ({params})  {
       <Navbar/> 
       <Rope category={categorySlug} collection={collectionSlug}/>
       <Title text={`Collections List`}/>
-      <div className={collections.length != 1 ?styles.designs : styles.designs_one}>
-        {collections?.map((collection, index) => {
-          return (
-            <AnimatedBox key={collection._id}  className={styles.animate_box}>
-              <Design key={collection._id} design={collection} categorySlug={categorySlug} collectionSlug={collectionSlug}/>
-            </AnimatedBox>
-          )
-         })} 
-      </div>
+      <Products collectionsBox={collections} collectionSlug={collectionSlug} categorySlug={categorySlug}/>
       <Footer/>
     </div>
   )

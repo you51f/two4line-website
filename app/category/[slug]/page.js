@@ -8,11 +8,11 @@ import {React } from 'react'
 import Image from 'next/image';
 import styles from '../../../app/page.module.css';
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
-import { AnimatedBox, CollectionBox, Footer, Navbar, Rope, Title } from '@/app/components';
+import { AnimatedBox, CollectionBox, Collections, Footer, Navbar, Rope, Title } from '@/app/components';
 import Head from 'next/head';
 
 
-export default async function Collections ({ params }) {
+export default async function CollectionsMain ({ params }) {
   const categorySlug = params.slug
 
 
@@ -32,15 +32,7 @@ export default async function Collections ({ params }) {
       <Navbar/> 
       <Rope category={categorySlug}/>
       <Title text={`Collections`}/>
-      <div className={styles.collection}>
-        {collections?.map((collection, index) => {
-          return (
-            <AnimatedBox key={collection._id} className={styles.animate_box}>
-              <CollectionBox key={collection._id} collection={collection} categorySlug={categorySlug} index={index}/>
-            </AnimatedBox>
-          )
-        })} 
-      </div>
+      <Collections collectionsBox={collections} categorySlug={categorySlug}/>
       <Footer/>
     </div>
   )

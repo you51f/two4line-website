@@ -503,6 +503,11 @@
   transform: translateY(0);
   
 }
+.no_animate {
+  opacity: 0;
+  transform: translateY(20%);
+  
+}
 
 .animate_box {
   z-index: 0;
