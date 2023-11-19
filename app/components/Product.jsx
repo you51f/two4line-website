@@ -48,7 +48,7 @@ const Product = ({product}) => {
             className={styles.product_detail_image}
             width={513}
             height={515} 
-          alt={image[index]?.alt}
+          alt={name}
           loading="lazy"
               />
           </div>
@@ -61,7 +61,7 @@ const Product = ({product}) => {
                 onMouseEnter={() => setIndex(i)}
                 width={513}
             height={515} 
-          alt={item?.alt}
+          alt={i}
           loading="lazy"
               />
             ))}

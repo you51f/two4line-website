@@ -19,7 +19,7 @@ const Design = ({design: { _id, image, name, slug }, categorySlug, collectionSlu
             className={styles.design_image}
             width={435}
             height={438} 
-          alt={image[0]?.alt}
+          alt={name}
           loading="lazy"
             />
           ) : null}

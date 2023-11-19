@@ -20,7 +20,7 @@ const CollectionBox = ({ collection: { _id, image, name, slug }, categorySlug, i
           className={styles.collection_image}
           width={435}
             height={438} 
-          alt={image[0]?.alt}
+          alt={name}
           loading="lazy" 
         />
       ) : null}
@@ -34,7 +34,7 @@ const CollectionBox = ({ collection: { _id, image, name, slug }, categorySlug, i
               className={styles.collection_small_image}
               width={435}
             height={438} 
-          alt={item?.alt}
+          alt={i}
           loading="lazy"
             />
           ))}
