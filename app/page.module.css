@@ -271,7 +271,7 @@
 .banner_logo { 
   width: 30%;
   height: 80%;
-  background-image: url(/images/banner_logo.png);
+  background-image: url(/images/banner_logo.webp);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -293,7 +293,7 @@
 .banner_shirt { 
   width: 30%;
   height: 80%;
-  background-image: url(/images/banner_shirt.png);
+  background-image: url(/images/banner_shirt.webp);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -376,7 +376,7 @@
   margin-top: 10px;
 }
 .footer_evo_logo {
-  background-image: url(/images/evo_logo.png);
+  background-image: url(/images/evo_logo.webp);
   width: 64px;
   height: 28px;
   margin-left: 10px;
@@ -1545,7 +1545,7 @@ padding: 10px 10px;
   .banner_logo { 
   width: 35%;
   height: 40%;
-  background-image: url(/images/banner_logo.png);
+  background-image: url(/images/banner_logo.webp);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -1569,7 +1569,7 @@ padding: 10px 10px;
 .banner_shirt { 
   width: 50%;
   height: 40%;
-  background-image: url(/images/banner_shirt.png);
+  background-image: url(/images/banner_shirt.webp);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -2030,7 +2030,7 @@ padding: 10px 10px;
   .banner_logo { 
     width: 25%;
     height: 70%;
-    background-image: url(/images/banner_logo.png);
+    background-image: url(/images/banner_logo.webp);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -2047,7 +2047,7 @@ padding: 10px 10px;
   .banner_shirt { 
     width: 25%;
     height: 80%;
-    background-image: url(/images/banner_shirt.png);
+    background-image: url(/images/banner_shirt.webp);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
