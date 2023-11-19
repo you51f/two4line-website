@@ -8,7 +8,7 @@ const Products = ({collectionsBox,categorySlug,collectionSlug}) => {
 
 useEffect(() => {
   setCollections(collectionsBox)
-}, []);
+}, [collectionsBox]);
   return (
     <div className={collections.length != 1 ? styles.designs : styles.designs_one}>
         {collections?.map((collection, index) => {

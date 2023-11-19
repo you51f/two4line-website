@@ -8,7 +8,7 @@ const Collections = ({collectionsBox, categorySlug}) => {
 
 useEffect(() => {
   setCollections(collectionsBox)
-}, []);
+}, [collectionsBox]);
   return (
     <div className={styles.collection}>
         {collections?.map((collection, index) => {

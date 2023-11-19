@@ -8,7 +8,7 @@ const Categories = ({categoriesBox}) => {
 
 useEffect(() => {
   setCategories(categoriesBox)
-}, []);
+}, [categoriesBox]);
   return (
     <div className={styles.category}>
         {categories?.map((category, index) => {
