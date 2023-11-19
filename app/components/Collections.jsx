@@ -6,18 +6,18 @@ import styles from '../page.module.css';
 const Collections = ({collectionsBox, categorySlug}) => {
     const [collections, setCollections] = useState([]);
 
-useEffect(() => {
-  setCollections(collectionsBox)
-}, [collectionsBox]);
+// useEffect(() => {
+//   setCollections(collectionsBox)
+// }, [collectionsBox]);
   return (
     <div className={styles.collection}>
-        {collections?.map((collection, index) => {
+        {/* {collections?.map((collection, index) => {
           return (
             
               <CollectionBox key={collection._id} collection={collection} categorySlug={categorySlug} index={index}/>
             
           )
-        })} 
+        })}  */}
       </div>
   )
 }

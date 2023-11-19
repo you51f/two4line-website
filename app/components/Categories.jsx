@@ -6,18 +6,17 @@ import styles from '../page.module.css';
 const Categories = ({categoriesBox}) => {
     const [categories, setCategories] = useState([]);
 
-useEffect(() => {
-  setCategories(categoriesBox)
-}, [categoriesBox]);
+// useEffect(() => {
+//   setCategories(categoriesBox)
+// }, [categoriesBox]);
   return (
     <div className={styles.category}>
-        {categories?.map((category, index) => {
+        {/* {categories?.map((category, index) => {
           return (
             <Category key={category._id} category={category}/> 
-            // <Category key={category._id} category={category}/> 
-            // <Category key={category._id} category={category}/> 
+            
           )
-        })} 
+        })}  */}
       </div> 
   )
 }
