@@ -26,7 +26,7 @@ const Product = ({product}) => {
 
       onAdd(sentProduct, qty);
   
-      setShowCart(true);
+      // setShowCart(true);
     }
     const handleAdd = () => {
       const sentProduct = {...product}
