@@ -20,7 +20,7 @@ const Navbar = () => {
     <div>
       <div className={styles.navbar}>
         <div className={styles.navbar_items}>
-          <button name='togglebtns' onClick={handleMenuToggle} className={styles.navbar_burger}>
+          <button onClick={handleMenuToggle} className={styles.navbar_burger}>
           {isMenuOpen ? (
     <RxCross2 className={styles.menu_btn} /> 
   ) : (
@@ -29,15 +29,15 @@ const Navbar = () => {
           </button>
           <Link href={'/'}><div className={styles.navbar_logo}></div></Link>
           <div className={styles.navbar_right}>
-            <ul className={styles.navbar_list}>
-              <Link href={'/'}><li>Home</li></Link>
-              <Link href={'/catalog'}><li>Catalog</li></Link>
-              <Link href={'/about-us'}><li>About</li></Link>
+            <div className={styles.navbar_list}>
+              <Link href={'/'}><ul>Home</ul></Link>
+              <Link href={'/catalog'}><ul>Catalog</ul></Link>
+              <Link href={'/about-us'}><ul>About</ul></Link>
               {/* <ul>Catalog</ul>
               <ul>Contact</ul>
               <ul>About</ul> */}
-            </ul>
-            <button name='cartbtn' type='button' onClick={() => setShowCart(true)} className={styles.navbar_cart_btn}>
+            </div>
+            <button type='button' onClick={() => setShowCart(true)} className={styles.navbar_cart_btn}>
               <MdOutlineShoppingCart className={styles.navbar_cart} />
               <div className={totalQuantities != 0 ? styles.navbar_qty_active : styles.navbar_qty}>{totalQuantities}</div>
            </button>
@@ -50,11 +50,11 @@ const Navbar = () => {
 
         <div className={`${styles.side_menu} ${isOpen ? styles.show : ''}`}>
           <button className={styles.navbar_cart_btn} onClick={handleMenuToggle}><RxCross2 className={styles.menu_btn}/></button>
-          <ul className={styles.menu_list}>
-          <Link href={'/'}><li onClick={handleMenuToggle}>Home</li></Link>
-              <Link href={'/catalog'}><li onClick={handleMenuToggle}>Catalog</li></Link>
-              <Link href={'/about-us'}><li onClick={handleMenuToggle}>About</li></Link>
-          </ul>
+          <div className={styles.menu_list}>
+          <Link href={'/'}><ul onClick={handleMenuToggle}>Home</ul></Link>
+              <Link href={'/catalog'}><ul onClick={handleMenuToggle}>Catalog</ul></Link>
+              <Link href={'/about-us'}><ul onClick={handleMenuToggle}>About</ul></Link>
+          </div>
         </div>
         {showCart && <Cart />}
     </div>
