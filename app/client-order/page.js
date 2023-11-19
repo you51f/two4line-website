@@ -9,7 +9,7 @@ export default async function ClientOrder() {
 
   
   return (
-    <div>
+    <div className={styles.home2}>
       <OrderForm fetchedVouchers={fetchedVouchers} />
     </div>
   );
