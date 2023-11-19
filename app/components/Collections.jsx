@@ -11,13 +11,13 @@ useEffect(() => {
 }, [collectionsBox]);
   return (
     <div className={styles.collection}>
-        {collections?.map((collection, index) => {
+        {/* {collections?.map((collection, index) => {
           return (
             
               <CollectionBox key={collection._id} collection={collection} categorySlug={categorySlug} index={index}/>
             
           )
-        })} 
+        })}  */}
       </div>
   )
 }
