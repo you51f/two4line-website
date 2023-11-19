@@ -11,11 +11,11 @@ useEffect(() => {
 }, [categoriesBox]);
   return (
     <div className={styles.category}>
-        {/* {categories?.map((category, index) => {
+        {categories?.map((category, index) => {
           return (
-            <Category category={category}/> 
+            <Category key={category._id} category={category}/> 
           )
-        })}  */}
+        })} 
       </div> 
   )
 }
