@@ -10,6 +10,7 @@ import styles from '../../../app/page.module.css';
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import { AnimatedBox, CollectionBox, Collections, Footer, Navbar, Rope, Title } from '@/app/components';
 import Head from 'next/head';
+import MotionLayout from '@/app/components/MotionLayout';
 
 
 export default async function CollectionsMain ({ params }) {
@@ -24,7 +25,8 @@ export default async function CollectionsMain ({ params }) {
   // console.log(collections);
   
   return (
-    <div className={styles.home}> 
+    <MotionLayout>
+      <div className={styles.home}> 
     {/* <Head>
         <title>My page title</title>
         <meta property="og:title" content="My page title" key="title" />
@@ -44,6 +46,7 @@ export default async function CollectionsMain ({ params }) {
       </div>
       <Footer/>
     </div>
+    </MotionLayout>
   )
 }
 

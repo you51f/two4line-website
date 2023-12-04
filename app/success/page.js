@@ -4,6 +4,7 @@ import styles from '../../app/page.module.css';
 import { BsBagCheckFill } from 'react-icons/bs';
 import Link from 'next/link';
 import { useStateContext } from '../context/StateContext';
+import MotionLayout from '../components/MotionLayout';
 
 const Success = () => {
   const { setTotalQuantities, setTotalPrice, setCartItems } = useStateContext();
@@ -14,7 +15,8 @@ const Success = () => {
     setTotalQuantities(0);
   },[setCartItems, setTotalPrice, setTotalQuantities])
   return (
-    <div className={styles.success_wrapper}>
+    <MotionLayout>
+      <div className={styles.success_wrapper}>
       <div className={styles.success}>
         <p className={styles.icon}>
           <BsBagCheckFill />
@@ -34,6 +36,7 @@ const Success = () => {
         </Link>
       </div> 
     </div> 
+    </MotionLayout>
   )
 }
 

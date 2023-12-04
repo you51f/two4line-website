@@ -3,6 +3,7 @@ import { AnimatedBox, Products, Design, Footer, Navbar, Product, Rope, Title } f
 import { sanityFetch } from '@/sanity/lib/sanityFetch';
 import imageUrlBuilder from "@sanity/image-url";
 import styles from '../../../../../app/page.module.css';
+import MotionLayout from '@/app/components/MotionLayout';
 
 
 export default async function CollectionList ({params})  {
@@ -18,7 +19,8 @@ export default async function CollectionList ({params})  {
   // console.log(params);
 
   return (
-    <div className={styles.home}> 
+    <MotionLayout>
+      <div className={styles.home}> 
       <Navbar/> 
       <Rope category={categorySlug} collection={collectionSlug}/>
       <Title text={`Collections List`}/>
@@ -34,5 +36,6 @@ export default async function CollectionList ({params})  {
       </div>
       <Footer/>
     </div>
+    </MotionLayout>
   )
 }

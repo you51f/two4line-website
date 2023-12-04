@@ -11,22 +11,30 @@ import styles from '../page.module.css';
 import Image from 'next/image';
 import imageUrlBuilder from "@sanity/image-url";
 import { client } from '@/sanity/lib/client';
+import { useEffect } from 'react';
 // import getStripe from '../lib/getStripe';
 // import { urlFor } from '../lib/client'; 
 // import getStripe from '../lib/getStripe';
 
 const Cart = () => {
-  const cartRef = useRef();
+  const cartRef = useRef(null);
   const builder = imageUrlBuilder(client);
-  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove } = useStateContext();
+  const { showCart, totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove } = useStateContext();
 
+  
   const handleCheckout = async () => {
     
   }
 
+  useEffect(() => {
+    if (cartRef.current) {
+      cartRef.current.classList.add(styles.show2); // Add the show2 class to trigger the animation
+    }
+  }, []);
+
   return (
     <div className={styles.cart_wrapper} ref={cartRef}>
-      <div className={styles.cart_container}>
+      <div className={`${styles.cart_container} ${cartRef.current ? styles.show2 : ''}`}>
         <div
         className={styles.cart_heading}
         onClick={() => setShowCart(false)}>

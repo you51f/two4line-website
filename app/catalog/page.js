@@ -10,6 +10,7 @@ import styles from '../../app/page.module.css';
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import { AnimatedBox, CollectionBox, Footer, Navbar, Rope, Title } from '@/app/components';
 import Head from 'next/head';
+import MotionLayout from '../components/MotionLayout';
 
 
 export default async function Catalog () {
@@ -24,7 +25,8 @@ export default async function Catalog () {
   // console.log(collections);
   
   return (
-    <div className={styles.home}> 
+    <MotionLayout>
+      <div className={styles.home}> 
     {/* <Head>
         <title>My page title</title>
         <meta property="og:title" content="My page title" key="title" />
@@ -43,6 +45,7 @@ export default async function Catalog () {
       </div>
       <Footer/>
     </div>
+    </MotionLayout>
   )
 }
 

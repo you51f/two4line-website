@@ -8,6 +8,7 @@ import {React } from 'react'
 import Image from 'next/image';
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import { Footer, Navbar, Product, Rope } from '@/app/components';
+import MotionLayout from '@/app/components/MotionLayout';
 
 
 export default async function ProductDetails ({ params }) {
@@ -23,12 +24,14 @@ export default async function ProductDetails ({ params }) {
     // const builder = imageUrlBuilder(client);  
   
   return (
-    <div>
+    <MotionLayout>
+      <div>
       <Navbar/>
       <Rope category={categorySlug} collection={collectionSlug} product={productSlug}/>
       <Product product={product}/>
       <Footer/>
     </div>
+    </MotionLayout>
   )
 }
 

@@ -1,6 +1,7 @@
 import './globals.css'
 import { Edu_TAS_Beginner } from 'next/font/google'
 import { StateContext } from './context/StateContext'
+import MotionLayout from './components/MotionLayout'
 
 const inter = Edu_TAS_Beginner({ subsets: ['latin'] })
 
