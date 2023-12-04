@@ -11,6 +11,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import { client } from '@/sanity/lib/client';
 import { AiOutlineMinus, AiOutlinePlus, AiOutlineLeft, AiOutlineShopping } from 'react-icons/ai';
 import { FaTrash } from 'react-icons/fa6';
+import Image from 'next/image';
 
 const Navbar = () => {
   const builder = imageUrlBuilder(client);
