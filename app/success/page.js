@@ -16,6 +16,7 @@ const Success = () => {
   },[setCartItems, setTotalPrice, setTotalQuantities])
   return (
     <MotionLayout>
+      <div className={styles.home2}>
       <div className={styles.success_wrapper}>
       <div className={styles.success}>
         <p className={styles.icon}>
@@ -36,6 +37,7 @@ const Success = () => {
         </Link>
       </div> 
     </div> 
+      </div>
     </MotionLayout>
   )
 }

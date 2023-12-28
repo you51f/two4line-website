@@ -1404,13 +1404,15 @@ padding: 10px 10px;
   .success_wrapper, .cancel_wrapper{
     background-color: var(--two4line-black);
     min-height: 60vh;
+    padding-top: 150px;
   
   }
   .success, .cancel{
     width: 1000px;
   margin: auto;
-  margin-top: 160px;
+  /* margin-top: 160px; */
     background-color: #dcdcdc;
+    color: #000000;
     padding: 50px;
     border-radius: 15px;
     display: flex;
@@ -2025,7 +2027,8 @@ padding: 10px 10px;
   }
 
   .success_wrapper, .cancel_wrapper{
- 
+
+    padding-top: 40px;
     min-height: 69vh;
   }
   .success, .cancel {
