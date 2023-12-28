@@ -33,8 +33,8 @@
   align-items: center;
   /* background-color: rgba(var(--callout-rgb), 0.5); */
   /* border-bottom: 1px solid lightgrey; */
-  background-color: #FFFFFF;
-  color: #000000;
+  background-color: #000000;
+  color: #FFFFFF;
   z-index: 10;
   /* margin-bottom: 70px; */
   /* border-radius: var(--border-radius); */
@@ -65,11 +65,11 @@
   justify-content: space-between;
 }
 .navbar_logo {
-  background-image: url(/images/nav_logo.svg);
-  background-size: cover;
+  background-image: url(/images/W.svg);
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  width: 40px;
+  width: 60px;
   height: 65px;
 }
 .product_detail_logo_box {
@@ -81,7 +81,7 @@
   
 }
 .product_detail_logo {
-  background-image: url(/images/two4line_black.svg);
+  background-image: url(/images/two4line_w.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -121,7 +121,7 @@
   transform: scale(1.2);
 }
 .navbar_cart {
-  color: #000000;
+  color: #FFFFFF;
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
@@ -182,14 +182,15 @@
   flex-direction: row;
   cursor: pointer;
   /* background-color: var(--two4line-green); */
-  color: #000000;
+  color: #FFFFFF;
 
 }
 
 .side_menu {
   width: 100%;
   height: 100%;
-  background: #FFFFFF;
+  background: #000000;
+  color: #FFFFFF;
   position: fixed;
   z-index: 5; 
   left: 0;
@@ -215,6 +216,7 @@
   cursor: pointer;
   font-size: 24px;
   transition: transform 0.2s ease-in-out;
+  color: #FFFFFF;
 }
 .menu_btn:hover {
   transform: scale(1.2);
@@ -243,12 +245,14 @@
 .home { 
   width: 100%;
   height: 100%; 
-  background-color: #F0F0F0;
+  background-color: var(--two4line-black); 
+  /* background-color: #F0F0F0;  */
 }
 .home2 { 
   width: 100%;
-  height: 100%; 
-  background-color: #FFFFFF;
+  height: 100vh; 
+  background-color: var(--two4line-black);
+  color: #FFFFFF;
 }
 .banner { 
   width: 100%;
@@ -309,8 +313,8 @@
   text-align: center;
   padding: 30px;
   font-size: 46px;
-  /* background-color: var(--two4line-green);
-  color: #FFFFFF; */
+  /* background-color: var(--two4line-green); */
+  color: #FFFFFF;
   
 }
 
@@ -320,14 +324,14 @@
   align-items: center;
   flex-direction: row;
   padding: 0 5vw;
-  /* background-color: var(--two4line-green);
-  color: #FFFFFF; */
+  background-color: var(--two4line-black);
+  color: #FFFFFF;
 }
 .category_box {
   width: 525px;
   height: 515px;   
   border-radius: 5px; 
-  background: lightgrey;
+  background: var(--two4line-black);
   /* background-image: url(/images/category_pic.png); */
   background-size: cover;
   background-position: center;
@@ -343,7 +347,8 @@
 }
 
 .footer {
-  background-color: var(--two4line-light-orange);
+  background-color: var(--two4line-black);
+  color: #FFFFFF;
   padding: 3vw;
 }
 
@@ -379,19 +384,23 @@
   margin-top: 10px;
 }
 .footer_evo_logo {
-  background-image: url(/images/evo_logo.png);
-  width: 64px;
+  background-image: url(/images/evo-web-logo.png);
+  width: 70px;
   height: 28px;
-  margin-left: 10px;
+  /* margin-left: 10px; */
+  background-size: contain;
+  background-position: center; 
+  background-repeat: no-repeat;
   cursor: pointer;
 }
 
 .footer_logo {
-  background-image: url(/images/nav_logo.svg);
-  width: 130px;
+  background-image: url(/images/W.svg);
+  width: 150px;
+  /* width: 130px; */
   height: 220px;
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: center; 
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -425,19 +434,19 @@
   width: 73px;
   font-size: 22px;
   font-weight: bold;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #FFFFFF;
 }
 .footer_pages_title2 {
   width: 165px;
   font-size: 22px;
   font-weight: bold;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #FFFFFF;
 }
 .footer_pages_title3 {
   width: 303px;
   font-size: 22px;
   font-weight: bold;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #FFFFFF;
 }
 .footer_pages_title4 {
   margin-top: 10px;
@@ -725,9 +734,10 @@
 .design_name {
   font-size: 32px;
   margin: 15px 0;
+  color: #FFFFFF;
 }
 .design_btn {
-  background-color: #000000;
+  background-color: #FFFFFF;
   border-radius: 5px;
   height: 54px;
   width: 100%;
@@ -735,7 +745,7 @@
   justify-content: center;
   align-items: center;
   font-size: 22px;
-  color: #FFFFFF;
+  color: var(--two4line-black);
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
@@ -751,7 +761,8 @@
  padding: 40px;
  padding-top: 60px;
  /* color: var(--heading-color); */
- background-color: #F0F0F0;
+ background-color: var(--two4line-black);
+ color: #FFFFFF;
  
 }
 
@@ -897,7 +908,7 @@
 }
 
 .buttons .add_to_cart{
-  background-color: #000000;
+  background-color: #FFFFFF;
   border-radius: 5px;
   height: 54px;
   margin-top: 30px;
@@ -906,7 +917,7 @@
   justify-content: center;
   align-items: center;
   font-size: 22px;
-  color: #FFFFFF;
+  color: var(--two4line-black);
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
@@ -967,10 +978,11 @@
   width: 375px;
   /* right: 0;
   top: 0; */
-  background-color: #f5f5f5;
+  background-color: var(--two4line-black);
+  color: #FFFFFF;
   float: right;
   padding: 40px 10px;
-  position: relative;
+  position: relative; 
   overflow-y: auto;
   
 }
@@ -1033,7 +1045,7 @@
   font-size: 20px;
   border: none;
   outline: none;
-  color: black;
+  color: #FFFFFF;
   background-color: transparent;
 }
 .quantity_desc .plus{
@@ -1056,7 +1068,7 @@
   width: 35px;
   height: 35px;
   border-radius: 5px;
-  background-color: var(--two4line-green);
+  background-color: var(--two4line-orange);
   color: #FFFFFF;
   display: flex;
   justify-content: center;
@@ -1076,7 +1088,7 @@
   outline: none;
   margin: 0 15px;
   background-color: transparent;
-  color: #000000;
+  color: #FFFFFF;
 }
 .cart_qty_price {
   display: flex;
@@ -1093,7 +1105,7 @@
   width: 35px;
   height: 35px;
   border-radius: 5px;
-  background-color: var(--two4line-green);
+  background-color: var(--two4line-orange);
   color: #FFFFFF;
   display: flex;
   justify-content: center;
@@ -1108,10 +1120,11 @@
 }
 .cart_bottom{
   position: absolute;
-  bottom: 12px;
-  right: 5px;
+  bottom: 0px;
+  right: 0px;
 width: 100%;
 padding: 30px 65px;
+background: #000000;
 
 }
 
@@ -1216,7 +1229,7 @@ padding: 10px 10px;
     transform: scale(1.05); 
   }
 .order_btn {
-  background-color: var(--two4line-green);
+  background-color: var(--two4line-orange);
     border-radius: 5px;
     height: 39px;
     margin-top: 30px;
@@ -1240,7 +1253,7 @@ padding: 10px 10px;
     width: 100%;
     justify-content: center;
     align-items: center;
-    /* background-color: aqua; */
+    background-color: var(--two4line-black);
     padding: 10px 3vw;
     margin-bottom: 50px;
   }
@@ -1262,7 +1275,7 @@ padding: 10px 10px;
   }
 
   .order_header_logo {
-    background-image: url(/images/nav_logo.svg);
+    background-image: url(/images/W.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
@@ -1472,6 +1485,7 @@ padding: 10px 10px;
     align-items: flex-start;
     flex-direction: column;
     font-size: 22px;
+    color: #FFFFFF;
   }
 
   .policy_text {
@@ -1541,11 +1555,12 @@ padding: 10px 10px;
   }
 
   .navbar_logo {
-    background-image: url(/images/nav_logo.svg);
-    background-size: cover;
+    background-image: url(/images/W.svg);
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat; 
-    width: 40px; 
+    width: 60px; 
+    /* width: 40px;  */
     height: 65px;
   }
 
@@ -1670,19 +1685,19 @@ padding: 10px 10px;
   width: 53px;
   font-size: 18px;
   font-weight: bold;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #FFFFFF;
 }
 .footer_pages_title2 {
   width: 160px; 
   font-size: 18px;
   font-weight: bold;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #FFFFFF;
 }
 .footer_pages_title3 {
   width: 260px;
   font-size: 18px;
   font-weight: bold;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #FFFFFF;
 }
 .footer_pages_title4 {
   margin-top: 10px;
@@ -1734,10 +1749,11 @@ padding: 10px 10px;
   margin-bottom: 20px;
 }
 .footer_logo {
-  background-image: url(/images/nav_logo.svg);
-  width: 90px;
+  background-image: url(/images/W.svg);
+  width: 150px;
+  /* width: 90px; */
   height: 150px;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   margin-bottom: 20px;
@@ -1865,9 +1881,10 @@ padding: 10px 10px;
 .design_name {
   font-size: 24px;
   margin: 11px 0;
+  color: #FFFFFF;
 }
 .design_btn {
-  background-color: #000000;
+  background-color: #FFFFFF;
   border-radius: 5px;
   height: 44px;
   width: 100%; 
@@ -1875,7 +1892,7 @@ padding: 10px 10px;
   justify-content: center;
   align-items: center;
   font-size: 18px;
-  color: #FFFFFF;
+  color: var(--two4line-black);
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
@@ -1908,7 +1925,7 @@ padding: 10px 10px;
     transform: scale(1.05);
   }
   .buttons .add_to_cart{
-    background-color: #000000;
+    background-color: #FFFFFF;
     border-radius: 5px;
     height: 39px;
     margin-top: 30px;
@@ -1917,7 +1934,7 @@ padding: 10px 10px;
     justify-content: center;
     align-items: center;
     font-size: 18px;
-    color: #FFFFFF;
+    color: var(--two4line-black);
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
@@ -1956,7 +1973,7 @@ padding: 10px 10px;
     font-size: 18px;
     border: none;
     outline: none;
-    color: #000000;
+    color: #FFFFFF;
     background-color: transparent;
   }
   .quantity_desc .plus{
@@ -2192,6 +2209,7 @@ padding: 10px 10px;
   .design_name {
     font-size: 24px;
     margin: 11px 0;
+    color: #FFFFFF;
   }
   .select_size {
     width: 100%;
@@ -2204,7 +2222,7 @@ padding: 10px 10px;
     outline: none;
   }
   .design_btn {
-    background-color: #000000;
+    background-color: #FFFFFF;
     border-radius: 5px;
     height: 44px;
     width: 100%; 
@@ -2212,7 +2230,7 @@ padding: 10px 10px;
     justify-content: center;
     align-items: center;
     font-size: 18px;
-    color: #FFFFFF;
+    color: var(--two4line-black);
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
@@ -2241,7 +2259,7 @@ padding: 10px 10px;
     transform: scale(1.05);
   }
   .buttons .add_to_cart{
-    background-color: #000000;
+    background-color: #FFFFFF;
     border-radius: 5px;
     height: 39px;
     margin-top: 30px;
@@ -2250,7 +2268,7 @@ padding: 10px 10px;
     justify-content: center;
     align-items: center;
     font-size: 18px;
-    color: #FFFFFF;
+    color: var(--two4line-black);
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
@@ -2289,7 +2307,7 @@ padding: 10px 10px;
     font-size: 18px;
     border: none;
     outline: none;
-    color: #000000;
+    color: #FFFFFF;
     background-color: transparent;
   }
   .quantity_desc .plus{
