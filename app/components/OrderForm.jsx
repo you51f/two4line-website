@@ -23,6 +23,8 @@ const OrderForm = ({fetchedVouchers}) => {
   const [selectedVoucher, setSelectedVoucher] = useState('');
   const [vouchers, setVouchers] = useState(fetchedVouchers);
   const [invalidVoucher, setInvalidVoucher] = useState(false);
+  const [buttonDisabled, setButtonDisabled] = useState(false);
+  const [voucherDisabled, setVoucherDisabled] = useState(false);
  
   
   
@@ -30,6 +32,7 @@ const OrderForm = ({fetchedVouchers}) => {
   const setNewTotalPrice = () => {
     const matchedVoucher = vouchers.find((v) => v.name === voucher);
     if (matchedVoucher) {
+      setVoucherDisabled(true)
         setSelectedVoucher(matchedVoucher.name)
       const discount = matchedVoucher.discount / 100; // Convert discount percentage to decimal
       const discountedPrice = totalPrice - totalPrice * discount;
@@ -39,6 +42,7 @@ const OrderForm = ({fetchedVouchers}) => {
         setSelectedVoucher('')
       setNewTotal(totalPrice);
       setInvalidVoucher(true);
+      setVoucherDisabled(true)
     }
   };
 
@@ -56,6 +60,7 @@ const OrderForm = ({fetchedVouchers}) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setButtonDisabled(true);
     // Handle form submission here
     const data = {
       cartItems: cartItems,
@@ -154,6 +159,7 @@ const OrderForm = ({fetchedVouchers}) => {
             
             <div>
               <label htmlFor="voucher">Voucher:</label>
+              {voucherDisabled ? <h4>{voucher} is applied</h4> :
               <div className={styles.voucher}>
                 <input
                   type="text"
@@ -166,7 +172,7 @@ const OrderForm = ({fetchedVouchers}) => {
                 <div onClick={setNewTotalPrice} className={styles.voucher_btn}>
                   Apply
                 </div>
-              </div>
+              </div> }
               {invalidVoucher && (
                 <div className={styles.invalid_voucher}>
                   Invalid Voucher. Please enter a valid voucher code.
@@ -184,7 +190,7 @@ const OrderForm = ({fetchedVouchers}) => {
                   </div>
               </label>
             </div>
-            <button type="submit" className={styles.order_send_btn}>
+            <button type="submit" className={styles.order_send_btn} style={{ backgroundColor: buttonDisabled ? 'lightgrey' : '' }} disabled={buttonDisabled}> 
               Order
             </button>
           </form>
