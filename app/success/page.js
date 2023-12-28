@@ -18,6 +18,9 @@ const Success = () => {
     <MotionLayout>
       <div className={styles.home2}>
       <div className={styles.success_wrapper}>
+      <div className={styles.order_header2}>
+        <div className={styles.order_header_logo}></div>
+      </div>
       <div className={styles.success}>
         <p className={styles.icon}>
           <BsBagCheckFill />
