@@ -1402,7 +1402,7 @@ padding: 10px 10px;
   }
 
   .success_wrapper, .cancel_wrapper{
-    background-color: white;
+    background-color: var(--two4line-black);
     min-height: 60vh;
   
   }
