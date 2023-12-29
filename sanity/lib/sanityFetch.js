@@ -21,13 +21,14 @@ export async function sanityFetch(query, params = DEFAULT_PARAMS, tags = DEFAULT
   return client
     .withConfig({ useCdn: true })
     .fetch(query, params, { 
-      cache: isDevelopment ? undefined : "force-cache",
+      // cache: isDevelopment ? undefined : "force-cache",
+      cache: 'no-store',
       ...({
         token: token,
         perspective: "previewDrafts",
       }),
       next: {
-        ...({ revalidate: 10 }),
+        ...({ revalidate: 0 }),
         tags,
       },
     });
