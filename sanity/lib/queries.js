@@ -5,6 +5,7 @@ export const productsQuery = groq`*[_type == "product"]`;
 export const categoriesQuery = groq`*[_type == "category"]`;
 export const categoriesSingleQuery = groq`*[_type == "collection" && slug.current == $slug][0]`;
 export const collectionsQuery = groq`*[_type == "collection"]`;
+export const imageSlidersQuery = groq`*[_type == "slider"]`;
 
 
 // Get a single product by its slug
