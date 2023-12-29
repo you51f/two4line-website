@@ -16,7 +16,7 @@ export async function sanityFetch(query, params = DEFAULT_PARAMS, tags = DEFAULT
     ); 
   }  
   const isDevelopment = process.env.NODE_ENV === "development";
-  const revalidate = 10
+  // const revalidate = 10
 
   return client
     .withConfig({ useCdn: true })
@@ -27,7 +27,8 @@ export async function sanityFetch(query, params = DEFAULT_PARAMS, tags = DEFAULT
         perspective: "previewDrafts",
       }),
       next: {
-        revalidate 
+        ...({ revalidate: 10 }),
+        tags,
       },
     });
   // return 0;

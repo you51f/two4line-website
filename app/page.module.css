@@ -319,10 +319,11 @@
 }
 
 .category {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  /* justify-content: space-between;
   align-items: center;
-  flex-direction: row;
+  flex-direction: row; */
+  grid-template-columns: auto auto;
   padding: 0 5vw;
   background-color: var(--two4line-black);
   color: #FFFFFF;
