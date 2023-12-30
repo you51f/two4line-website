@@ -17,15 +17,15 @@ const Footer = () => {
                     <div className={styles.footer_pages}>
                         <div className={styles.footer_pages_title}>Pages</div>
                         <div className={styles.footer_pages_items}>
-                        <Link href={'/'}><ul>Home</ul></Link>
-                        <Link href={'/catalog'}><ul>Catalog</ul></Link>
-                        <Link href={'/about-us'}><ul>About</ul></Link>
+                        <Link className={styles.no_decoration_text} href={'/'}><ul>Home</ul></Link>
+                        <Link className={styles.no_decoration_text} href={'/catalog'}><ul>Catalog</ul></Link>
+                        <Link className={styles.no_decoration_text} href={'/about-us'}><ul>About</ul></Link>
                         </div>
                     </div>
                     <div className={styles.footer_policies}>
                     <div className={styles.footer_pages_title2}>Policies</div>
                         <div className={styles.footer_pages_items}>
-                            <Link href={'/exchange-refund-policy'}><ul>Exchange & Refund</ul></Link>
+                            <Link className={styles.no_decoration_text} href={'/exchange-refund-policy'}><ul>Exchange & Refund</ul></Link>
                             
                         </div>
                     </div>
@@ -35,10 +35,10 @@ const Footer = () => {
                 <div className={styles.footer_social}>
                     <div className={styles.footer_pages_title3}>Follow-Us on Social Media</div>
                         <div className={styles.footer_social_items}>
-                            <ul><AiOutlineInstagram/></ul>
-                            <ul><AiFillFacebook/></ul>
-                            <ul><FaXTwitter/></ul>
-                            <ul><BiLogoTiktok/></ul>
+                            <Link className={styles.footer_icons} href={'https://www.instagram.com/two4line?igsh=MmVlMjlkMTBhMg=='}><ul><AiOutlineInstagram/></ul></Link>
+                            <Link className={styles.footer_icons} href={''}><ul><AiFillFacebook/></ul></Link>
+                            <Link className={styles.footer_icons} href={''}><ul><FaXTwitter/></ul></Link>
+                            <Link className={styles.footer_icons} href={''}><ul><BiLogoTiktok/></ul></Link>
                         </div>
                         <div className={styles.footer_pages_title4}><HiOutlineMail className={styles.footer_email}/> Email: <span>two4line@gmail.com</span></div>
                 </div>  

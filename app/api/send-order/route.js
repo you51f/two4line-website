@@ -3,7 +3,8 @@ import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 import styles from '../../../app/page.module.css';
 
-const password = "imcqouyaykhjtttc";
+
+// const password = "imcqouyaykhjtttc";
 
 export async function POST(request) {
   const body = await request.json();
@@ -17,8 +18,8 @@ export async function POST(request) {
       port: 587,
       secure: false,
       auth: {
-        user: "you51felbalaa@gmail.com",
-        pass: password
+        user: "two4line@gmail.com",
+        pass: process.env.NODE_MAILER_PASS
       },
     });
     
@@ -41,8 +42,8 @@ export async function POST(request) {
     )).join('');
 
     await transporter.sendMail({ 
-      from: "you51felbalaa@gmail.com",
-      to: "you51felbalaa@gmail.com",
+      from: "two4line@gmail.com",
+      to: "two4line@gmail.com",
       subject: "An Order from Two4line website",
       text: "An Order from Two4line website",
       html: `<div style="font-family: Arial, sans-serif;">

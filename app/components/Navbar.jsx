@@ -41,9 +41,9 @@ const Navbar = () => {
           <Link href={'/'}><div className={styles.navbar_logo}></div></Link>
           <div className={styles.navbar_right}>
             <div className={styles.navbar_list}>
-              <Link href={'/'}><ul>Home</ul></Link>
-              <Link href={'/catalog'}><ul>Catalog</ul></Link>
-              <Link href={'/about-us'}><ul>About</ul></Link>
+              <Link className={styles.no_decoration_text} href={'/'}><ul>Home</ul></Link>
+              <Link className={styles.no_decoration_text} href={'/catalog'}><ul>Catalog</ul></Link>
+              <Link className={styles.no_decoration_text} href={'/about-us'}><ul>About</ul></Link>
               {/* <ul>Catalog</ul>
               <ul>Contact</ul>
               <ul>About</ul> */}
@@ -62,9 +62,9 @@ const Navbar = () => {
         <div className={`${styles.side_menu} ${isOpen ? styles.show : ''}`}>
           <button className={styles.navbar_cart_btn} onClick={handleMenuToggle}><RxCross2 className={styles.menu_btn}/></button>
           <div className={styles.menu_list}>
-          <Link href={'/'}><ul onClick={handleMenuToggle}>Home</ul></Link>
-              <Link href={'/catalog'}><ul onClick={handleMenuToggle}>Catalog</ul></Link>
-              <Link href={'/about-us'}><ul onClick={handleMenuToggle}>About</ul></Link>
+          <Link className={styles.no_decoration_text}  href={'/'}><ul onClick={handleMenuToggle}>Home</ul></Link>
+              <Link className={styles.no_decoration_text} href={'/catalog'}><ul onClick={handleMenuToggle}>Catalog</ul></Link>
+              <Link className={styles.no_decoration_text} href={'/about-us'}><ul onClick={handleMenuToggle}>About</ul></Link>
           </div>
         </div>
        

@@ -33,7 +33,7 @@ const Success = () => {
           two4line@gmail.com
           </a>
         </p>
-        <Link href={'/catalog'}>
+        <Link className={styles.success_link} href={'/catalog'}>
           <div  width="300px" className={styles.success_btn}>
             Continue Shopping
           </div>

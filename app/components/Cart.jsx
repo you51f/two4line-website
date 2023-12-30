@@ -47,7 +47,7 @@ const Cart = () => {
           <div className={styles.empty_cart}>
             <AiOutlineShopping size={150} />
             <h3>Your shopping bag is empty</h3>
-            <Link href="/">
+            <Link className={styles.success_link} href={'/'}>
               <div
                 onClick={() => setShowCart(false)}
                 className={styles.resume_shop_btn}
@@ -99,7 +99,7 @@ const Cart = () => {
               <h3>${totalPrice}</h3>
             </div>
             <div className={styles.btn_container}>
-              <Link href="/client-order">
+              <Link className={styles.success_link} href={'/client-order'}>
               <div  className={styles.order_btn} >
                 Complete Order
               </div>
