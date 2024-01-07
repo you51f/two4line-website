@@ -37,8 +37,7 @@ const Footer = () => {
                         <div className={styles.footer_social_items}>
                             <Link className={styles.footer_icons} href={'https://www.instagram.com/two4line?igsh=MmVlMjlkMTBhMg=='}><ul><AiOutlineInstagram/></ul></Link>
                             <Link className={styles.footer_icons} href={''}><ul><AiFillFacebook/></ul></Link>
-                            <Link className={styles.footer_icons} href={''}><ul><FaXTwitter/></ul></Link>
-                            <Link className={styles.footer_icons} href={''}><ul><BiLogoTiktok/></ul></Link>
+                            <Link className={styles.footer_icons} href={'https://www.tiktok.com/@two4line?_t=8icBMfxLFWY&_r=1'}><ul><BiLogoTiktok/></ul></Link>
                         </div>
                         <div className={styles.footer_pages_title4}><HiOutlineMail className={styles.footer_email}/> Email: <span>two4line@gmail.com</span></div>
                 </div>  

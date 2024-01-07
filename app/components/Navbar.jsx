@@ -64,7 +64,11 @@ const Navbar = () => {
           <div className={styles.menu_list}>
           <Link className={styles.no_decoration_text}  href={'/'}><ul onClick={handleMenuToggle}>Home</ul></Link>
               <Link className={styles.no_decoration_text} href={'/catalog'}><ul onClick={handleMenuToggle}>Catalog</ul></Link>
-              <Link className={styles.no_decoration_text} href={'/about-us'}><ul onClick={handleMenuToggle}>About</ul></Link>
+              <Link className={styles.no_decoration_text} href={'/catalog'}><ul onClick={handleMenuToggle}>Hoodies</ul></Link>
+              <Link className={styles.no_decoration_text} href={'/catalog'}><ul onClick={handleMenuToggle}>Sweat-shirts</ul></Link>
+              <Link className={styles.no_decoration_text} href={'/catalog'}><ul onClick={handleMenuToggle}>Washing Instructions</ul></Link>
+              <Link className={styles.no_decoration_text} href={'/catalog'}><ul onClick={handleMenuToggle}>Contact Us</ul></Link>
+              <Link className={styles.no_decoration_text} href={'/about-us'}><ul onClick={handleMenuToggle}>Our Story</ul></Link>
           </div>
         </div>
        

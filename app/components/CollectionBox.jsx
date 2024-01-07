@@ -16,10 +16,10 @@ const CollectionBox = ({ collection: { _id, image, name, slug }, categorySlug, i
       <div className={styles.collection_box}>
       {image[0] ? (
         <Image
-          src={builder.image(image && image[0]).width(435).height(438).url()}
+          src={builder.image(image && image[0]).width(4160).height(4160).url()}
           className={styles.collection_image}
           width={435}
-            height={438} 
+            height={435} 
           alt={name}
           loading="lazy" 
         />
@@ -30,10 +30,10 @@ const CollectionBox = ({ collection: { _id, image, name, slug }, categorySlug, i
           {image?.slice(1, 4).map((item, i) => (
             <Image
               key={i}
-              src={builder.image(item).width(435).height(438).url()}
+              src={builder.image(item).width(4160).height(4160).url()}
               className={styles.collection_small_image}
-              width={435}
-            height={438} 
+              width={100}
+            height={100} 
           alt={i}
           loading="lazy"
             />

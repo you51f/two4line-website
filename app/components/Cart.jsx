@@ -62,8 +62,8 @@ const Cart = () => {
           {cartItems.length >= 1 && cartItems?.map((item) => (
             <div className={styles.product_cart} key={item._id}>
               <Image  
-          src={builder.image(item?.image[0]).width(513).height(515).url()} className={styles.cart_product_image} alt={item?.name} width={100}
-          height={90}  loading="lazy" />
+          src={builder.image(item?.image[0]).width(4160).height(4160).url()} className={styles.cart_product_image} alt={item?.name} width={100}
+          height={100}  loading="lazy" />
               <div className={styles.item_desc}>
                 <div className={styles.cart_head}>
                   <h5 className={styles.cart_name}>{item?.name}</h5>
@@ -79,11 +79,11 @@ const Cart = () => {
                 <div >
                   <div className={styles.cart_qty_price}>
                   <div className={styles.cart_desc}>
-                    <span className={styles.minus} onClick={() => toggleCartItemQuanitity(item._id, item.selectedSize, 'dec') }>
+                    <button type='button' className={styles.minus} onClick={() => toggleCartItemQuanitity(item._id, item.selectedSize, 'dec') }>
                     <AiOutlineMinus />
-                    </span>
+                    </button>
                     <button className={styles.num} onClick="">{item?.quantity}</button>
-                    <span className={styles.plus} onClick={() => toggleCartItemQuanitity(item._id, item.selectedSize, 'inc') }><AiOutlinePlus /></span>
+                    <button type='button' className={styles.plus} onClick={() => toggleCartItemQuanitity(item._id, item.selectedSize, 'inc') }><AiOutlinePlus /></button>
                   </div>
                   <h4 className={styles.cart_price}>${item?.price}</h4>
                   </div>

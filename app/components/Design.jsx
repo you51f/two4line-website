@@ -15,10 +15,10 @@ const Design = ({design: { _id, image, name, slug }, categorySlug, collectionSlu
           {/* <img className={styles.design_image}/> */}
           {image[0] ? (
             <Image
-            src={builder.image(image && image[0]).width(435).height(438).url()} 
+            src={builder.image(image && image[0]).width(4160).height(4160).url()} 
             className={styles.design_image}
             width={435}
-            height={438} 
+            height={435} 
           alt={name}
           loading="lazy"
             />

@@ -43,10 +43,10 @@ const Product = ({product}) => {
         <div>
           <div className={styles.image_container}>
             <Image
-             src={builder.image(image[index]).width(513).height(515).url()} 
+             src={builder.image(image[index]).width(4160).height(4160).url()} 
              key={_id}
             className={styles.product_detail_image}
-            width={513}
+            width={515}
             height={515} 
           alt={name}
           loading="lazy"
@@ -56,11 +56,11 @@ const Product = ({product}) => {
             {image?.map((item, i) => (
               <Image 
                 key={i}
-                src={builder.image(item).width(513).height(515).url()}
+                src={builder.image(item).width(4160).height(4160).url()}
                 className={i === index ? `${styles.small_image}  ${styles.selected_image}` : styles.small_image}
                 onMouseEnter={() => setIndex(i)}
-                width={513}
-            height={515} 
+                width={121}
+            height={121} 
           alt={i}
           loading="lazy"
               />
