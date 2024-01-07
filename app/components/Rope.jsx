@@ -15,7 +15,7 @@ const Rope = ({category, collection, product}) => {
         <Link href={'/'} className={styles.footer_icons}><GoHome/></Link> {category != null ? <span>{'>'} {category}</span> : null} {collection != null ? <span>{'>'} {collection}</span> : null} {product != null ? <span>{'>'} {product}</span> : null}
         </div>
         <div className={styles.rope_right}>
-        <span><div><IoShareSocialSharp/></div>Share</span><div><Link href={'https://www.instagram.com/two4line?igsh=MmVlMjlkMTBhMg=='} className={styles.footer_icons}><AiOutlineInstagram/></Link></div> <div><Link href={'https://www.facebook.com/share/iTn72EpDk6yAC2Fk/?'}><AiFillFacebook/> </Link></div> <div> <Link href={'https://www.tiktok.com/@two4line?_t=8icBMfxLFWY&_r=1'}><BiLogoTiktok/></Link></div>
+        <span><div><IoShareSocialSharp/></div>Share</span><div><Link href={'https://www.instagram.com/two4line?igsh=MmVlMjlkMTBhMg=='} className={styles.footer_icons}><AiOutlineInstagram/></Link></div> <div><Link href={'https://www.facebook.com/share/iTn72EpDk6yAC2Fk/?'} className={styles.footer_icons}><AiFillFacebook/> </Link></div> <div> <Link href={'https://www.tiktok.com/@two4line?_t=8icBMfxLFWY&_r=1'} className={styles.footer_icons}><BiLogoTiktok/></Link></div>
         </div>
     </div>
   )
