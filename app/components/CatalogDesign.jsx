@@ -11,7 +11,7 @@ import { useStateContext } from '../context/StateContext';
 import { PiWarningCircleDuotone } from "react-icons/pi";
 
 const CatalogDesign = ({product, categorySlug}) => {
-    const { _id, image, name,slug, details, price, oldprice, category, sizes, selectedSize } = product;
+    const { _id, image, name,slug, details, price, oldprice, stock, category, sizes, selectedSize } = product;
     const builder = imageUrlBuilder(client); 
     const [sizeIndex, setSizeIndex] = useState(0);
     const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
