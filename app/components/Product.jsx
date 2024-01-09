@@ -72,7 +72,7 @@ const Product = ({product}) => {
         {stock === 0 ?
         <div className={styles.product_detail_desc}>
           <div className={styles.product_detail_name}>{name}</div>
-        <button type="button" className={styles.no_stock}><PiWarningCircleDuotone/> Sold Out</button> 
+        <div className={styles.no_stock}><PiWarningCircleDuotone/> Sold Out</div> 
         <div className={styles.product_detail_logo_box}>
           <div className={styles.product_detail_logo}></div>
         </div>
