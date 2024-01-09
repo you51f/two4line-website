@@ -635,7 +635,7 @@
 }
 .collection_info { 
   width: 540px;
-  height: 315px;
+  height: 200px;
   background-color: var(--two4line-green);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -649,7 +649,7 @@
 }
 .collection_info2 { 
   width: 540px;
-  height: 315px;
+  height: 200px;
   background-color: var(--two4line-orange);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -1075,7 +1075,7 @@
   font-size: 22px;
   color: var(--two4line-black);
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
 .add_to_cart:hover {
@@ -1087,11 +1087,15 @@
   color: #FFFFFF;
 }
 .fade_img {
-  animation-name: fade;
+  /* animation-name: fade;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-duration: 1s;
-  animation-direction: alternate;
+  animation-direction: alternate; */
+  transition: fade 0.5s ease-in-out;
+}
+.contact_label {
+  color: #FFFFFF;
 }
 @keyframes fade {
   0% {
@@ -2052,7 +2056,7 @@ padding: 10px 10px;
 }
 .collection_info { 
   width: 215px;
-  height: 140px;
+  height: 80px;
   background-color: var(--two4line-green);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -2065,7 +2069,7 @@ padding: 10px 10px;
 }
 .collection_info2 { 
   width: 215px;
-  height: 140px;
+  height: 80px;
   background-color: var(--two4line-orange);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -2439,7 +2443,7 @@ padding: 10px 10px;
   }
   .collection_info { 
     width: 350px;
-    height: 220px;
+    height: 160px;
     background-color: var(--two4line-green);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -2452,7 +2456,7 @@ padding: 10px 10px;
   }
   .collection_info2 { 
     width: 350px;
-    height: 220px;
+    height: 160px;
     background-color: var(--two4line-orange);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;

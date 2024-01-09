@@ -46,7 +46,7 @@ const Product = ({product}) => {
             <Image
              src={builder.image(image[index]).width(4160).height(4160).url()} 
              key={_id}
-            className={styles.product_detail_image}
+            className={`${styles.product_detail_image} ${styles.fade_img}`}
             width={515}
             height={515} 
           alt={name}
@@ -58,7 +58,7 @@ const Product = ({product}) => {
               <Image 
                 key={i}
                 src={builder.image(item).width(4160).height(4160).url()}
-                className={i === index ? `${styles.small_image}  ${styles.selected_image} ${styles.fade_img}` : `${styles.small_image} ${styles.fade_img}`}
+                className={i === index ? `${styles.small_image}  ${styles.selected_image}` : `${styles.small_image}`}
                 onMouseEnter={() => setIndex(i)}
                 width={121}
             height={121} 
@@ -95,7 +95,7 @@ const Product = ({product}) => {
         }
         </select>
         </div>
-        {item.stock <= 4 ? <div className={styles.quantity}>
+        {stock <= 4 ? <div className={styles.quantity}>
         <button type="button" className={styles.no_stock}><PiWarningCircleDuotone/>Only {stock} left</button> 
         </div> : null}
           {/* <h3>Quantity:</h3>

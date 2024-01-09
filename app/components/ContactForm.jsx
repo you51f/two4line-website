@@ -59,7 +59,7 @@ const OrderForm = () => {
         <div className={styles.order_form}>
           <form onSubmit={handleSubmit}>
           <div>
-              <label htmlFor="name">Name:</label>
+              <label className={styles.contact_label} htmlFor="name">Name:</label>
               <input
                 type="text"
                 id="name"
@@ -71,7 +71,7 @@ const OrderForm = () => {
               />
             </div>
             <div>
-              <label htmlFor="address">Email:</label>
+              <label className={styles.contact_label} htmlFor="address">Email:</label>
               <input
                 type="email"
                 id="email"
@@ -85,7 +85,7 @@ const OrderForm = () => {
             
             
             <div>
-              <label htmlFor="message">Message:</label>
+              <label className={styles.contact_label} htmlFor="message">Message:</label>
               <textarea
                 id="message"
                 className={styles.order_input}
