@@ -101,9 +101,9 @@ const Navbar = () => {
         <div className={styles.product_container_cart}>
           {cartItems.length >= 1 && cartItems?.map((item) => (
             <div className={styles.product_cart} key={item._id}>
-              {/* <Image  
-          src={builder.image(item?.image[0]).width(513).height(515).url()} className={styles.cart_product_image} alt={item?.name} width={100}
-          height={90}  loading="lazy" /> */}
+              <Image  
+          src={builder.image(item?.image[0]).width(4160).height(4160).url()} className={styles.cart_product_image} alt={item?.name} width={100}
+          height={100}  loading="lazy" />
               <div className={styles.item_desc}>
                 <div className={styles.cart_head}>
                   <h5 className={styles.cart_name}>{item?.name}</h5>
