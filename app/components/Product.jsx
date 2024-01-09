@@ -72,8 +72,7 @@ const Product = ({product}) => {
         {stock === 0 ?
         <div className={styles.product_detail_desc}>
           <div className={styles.product_detail_name}>{name}</div>
-        <p className={styles.price}>{price + (sizes && sizes[sizeIndex]?.addedprice || 0)} EGP</p>
-        <button type="button" className={styles.no_stock}><PiWarningCircleDuotone/> Not available right now</button> 
+        <button type="button" className={styles.no_stock}><PiWarningCircleDuotone/> Sold Out</button> 
         <div className={styles.product_detail_logo_box}>
           <div className={styles.product_detail_logo}></div>
         </div>
