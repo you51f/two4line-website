@@ -27,8 +27,7 @@ const OrderForm = () => {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    const newValue = type === 'checkbox' ? checked : value;
-    setFormData({ ...formData, [name]: newValue });
+    setFormData({ ...formData});
   };
 
   const handleSubmit = async (e) => {
