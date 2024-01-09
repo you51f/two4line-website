@@ -58,7 +58,7 @@ const Product = ({product}) => {
               <Image 
                 key={i}
                 src={builder.image(item).width(4160).height(4160).url()}
-                className={i === index ? `${styles.small_image}  ${styles.selected_image}` : styles.small_image}
+                className={i === index ? `${styles.small_image}  ${styles.selected_image} ${styles.fade_img}` : `${styles.small_image} ${styles.fade_img}`}
                 onMouseEnter={() => setIndex(i)}
                 width={121}
             height={121} 

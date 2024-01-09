@@ -1081,6 +1081,32 @@
 .add_to_cart:hover {
   transform: scale(1.05);
 }
+.add_to_cart:active {
+  transform: scale(0.95);
+  background-color: var(--two4line-orange);
+  color: #FFFFFF;
+}
+.fade_img {
+  animation-name: fade;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-direction: alternate;
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .buttons .buy_now{
   width: 200px;
 
@@ -1722,6 +1748,8 @@ padding: 10px 10px;
     width: 300px;
     background-color: transparent;
   }
+
+
 /* .side_menu { 
   width: 250px;
   transition: transform 0.3s ease-in-out;
