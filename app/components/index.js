@@ -10,6 +10,7 @@ export { default as CollectionBox } from "./CollectionBox";
 export { default as Rope } from "./Rope";
 export { default as Product } from "./Product";
 export { default as Design } from "./Design";
+export { default as CatalogDesign } from "./CatalogDesign";
 export { default as Cart } from "./Cart";
 export { default as OrderForm } from "./OrderForm";
 export { default as Collections } from "./Collections";

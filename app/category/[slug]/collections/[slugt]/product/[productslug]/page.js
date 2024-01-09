@@ -18,6 +18,17 @@ export default async function ProductDetails ({ params }) {
 
     const query = `*[_type == "product" && slug.current == $productSlug][0]`
     const product = await sanityFetch(query, {productSlug});
+
+    // const product = {
+    //   _id: '123456789',
+    //   image: ['', ''],
+    //   name: "Product X",
+    //   details: '',
+    //   price: 120,
+    //   category: '',
+    //   sizes: [{size: 'M'}, {size: 'L'}],
+    // }
+
     // const product = await sanityFetch(productQuery, params);
 
     // const { image, name, details, price, category } = product;

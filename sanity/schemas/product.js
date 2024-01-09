@@ -67,6 +67,16 @@ export default {
             ]
           }
         ]
-      }
+      },
+      { 
+        name: 'stock',
+        title: 'Stock',
+        type: 'number',
+      },
+      { 
+        name: 'oldprice',
+        title: 'Old price',
+        type: 'number',
+      },
     ]
   } 

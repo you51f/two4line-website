@@ -7,12 +7,13 @@ import { useStateContext } from '../context/StateContext';
 import { urlForImage } from '@/sanity/lib/image';
 import styles from '../../app/page.module.css';
 import Image from 'next/image';
+import { PiWarningCircleDuotone } from "react-icons/pi";
 
 
 
 
 const Product = ({product}) => {
-  const { _id, image, name, details, price, category, sizes, selectedSize } = product;
+  const { _id, image, name, details, price,oldprice, stock, category, sizes, selectedSize } = product;
     const builder = imageUrlBuilder(client);
     const [index, setIndex] = useState(0);
     const [sizeIndex, setSizeIndex] = useState(0);
@@ -68,51 +69,52 @@ const Product = ({product}) => {
           </div>
         </div>
 
+        {stock === 0 ?
         <div className={styles.product_detail_desc}>
           <div className={styles.product_detail_name}>{name}</div>
-          {/* <div>{name} {sizes && sizes[sizeIndex]?.size && `- ${sizes[sizeIndex].size}`}</div> */}
-          {/* <h4>Details: </h4>
-          <p>{details}</p> */}
-          <p className={styles.price}>{price + (sizes && sizes[sizeIndex]?.addedprice || 0)} EGP</p>
-          <h3 className={styles.size}>Sizes: </h3>
-          <div className={styles.size_container}>
-          <select
-            onChange={(e) => setSizeIndex(e.target.value)}
-            className={styles.select_size}
-          >
-            {
-            sizes?.map((item, i) => {
-              sizeNum = 1
-              return <option key={i} value={i}>{item.size}</option>
-              // <button key={i} onClick={() => {setSizeIndex(i)}}>{item.size}</button>
-            })
-          }
-          </select>
-          
-          {/* {
-            sizes?.map((item, i) => {
-              sizeNum = 1
-              return <button key={i} onClick={() => {setSizeIndex(i)}} className={i === sizeIndex ? 'size-box-selected' : 'size-box-normal'}>{item.size}</button>
-            })
-          } */}
-          </div>
-          <div className={styles.quantity}>
-            <h3>Quantity:</h3>
-            <p className={styles.quantity_desc}>
-              <span className={styles.minus} onClick={decQty}><AiOutlineMinus /></span>
-              <button className={styles.num}>{qty}</button>
-              <span className={styles.plus} onClick={incQty}><AiOutlinePlus /></span>
-            </p>
-          </div>
-          <div className={styles.buttons}>
-          <div  className={styles.add_to_cart} onClick={() => handleBuyNow()}>Add to Cart</div>
-
-            {/* <button type="button" className={styles.buy_now} onClick={() => handleBuyNow()}>Buy Now</button> */}
-          </div>
-          <div className={styles.product_detail_logo_box}>
-            <div className={styles.product_detail_logo}></div>
-          </div>
+        <p className={styles.price}>{price + (sizes && sizes[sizeIndex]?.addedprice || 0)} EGP</p>
+        <button type="button" className={styles.no_stock}><PiWarningCircleDuotone/> Not available right now</button> 
+        <div className={styles.product_detail_logo_box}>
+          <div className={styles.product_detail_logo}></div>
         </div>
+      </div>
+        : <div className={styles.product_detail_desc}>
+        <div className={styles.product_detail_name}>{name}</div>
+        <div className={styles.prices}>{oldprice === 0 ? null : <div className={styles.catalog_price_old}>{oldprice} EGP</div>} <div className={styles.catalog_price}>{price + (sizes && sizes[sizeIndex]?.addedprice || 0)} EGP</div></div>
+        <h3 className={styles.size}>Sizes: </h3>
+        <div className={styles.size_container}>
+        <select
+          onChange={(e) => setSizeIndex(e.target.value)}
+          className={styles.select_size}
+        >
+          {
+          sizes?.map((item, i) => {
+            sizeNum = 1
+            return <option key={i} value={i}>{item.size}</option>
+          })
+        }
+        </select>
+        </div>
+        {item.stock <= 4 ? <div className={styles.quantity}>
+        <button type="button" className={styles.no_stock}><PiWarningCircleDuotone/>Only {stock} left</button> 
+        </div> : null}
+          {/* <h3>Quantity:</h3>
+          <p className={styles.quantity_desc}>
+            <span className={styles.minus} onClick={decQty}><AiOutlineMinus /></span>
+            <button className={styles.num}>{qty}</button>
+            <span className={styles.plus} onClick={incQty}><AiOutlinePlus /></span>
+            {qty != item?.stock ? <span className={styles.plus} onClick={incQty}><AiOutlinePlus /></span> : <span className={styles.max} ><AiOutlinePlus /></span>}
+          </p> */}
+        {/* </div> */}
+        <div className={styles.buttons}>
+        <div  className={styles.add_to_cart} onClick={() => handleBuyNow()}>Add to Cart</div>
+
+        </div>
+        <div className={styles.product_detail_logo_box}>
+          <div className={styles.product_detail_logo}></div>
+        </div>
+      </div>
+      }
       </div>
       {/* <style>{`
         

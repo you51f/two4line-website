@@ -8,7 +8,7 @@ import {React } from 'react'
 import Image from 'next/image';
 import styles from '../../app/page.module.css';
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
-import { AnimatedBox, CollectionBox, Footer, Navbar, Rope, Title } from '@/app/components';
+import { AnimatedBox, CatalogDesign, CollectionBox, Footer, Navbar, Rope, Title } from '@/app/components';
 import Head from 'next/head';
 import MotionLayout from '../components/MotionLayout';
 
@@ -17,8 +17,8 @@ export default async function Catalog () {
   const categorySlug = 'catalog'
 
 
-  const query = `*[_type == "collection"]`
-  const collections = await sanityFetch(query);
+  const query = `*[_type == "product"]`
+  const products = await sanityFetch(query);
   
   // const builder = imageUrlBuilder(client);  
 
@@ -27,18 +27,15 @@ export default async function Catalog () {
   return (
     <MotionLayout>
       <div className={styles.home}> 
-    {/* <Head>
-        <title>My page title</title>
-        <meta property="og:title" content="My page title" key="title" />
-      </Head> */}
       <Navbar/> 
       {/* <Rope category={categorySlug}/> */}
       <Title text={`Catalog`}/>
-      <div className={styles.collection}>
-        {collections?.map((collection, index) => {
+      <div className={styles.catalog}>
+        {/* <CatalogDesign/> */}
+        {products?.map((product, index) => {
           return (
-            <AnimatedBox key={collection._id} className={styles.animate_box}>
-              <CollectionBox key={collection._id} collection={collection} categorySlug={categorySlug} index={index}/>
+            <AnimatedBox key={product._id} className={styles.animate_box}>
+              <CatalogDesign key={product._id} product={product} categorySlug={categorySlug} index={index}/>
             </AnimatedBox>
           )
         })} 

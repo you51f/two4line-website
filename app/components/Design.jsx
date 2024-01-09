@@ -14,14 +14,16 @@ const Design = ({design: { _id, image, name, slug }, categorySlug, collectionSlu
         <div className={styles.design_box}>
           {/* <img className={styles.design_image}/> */}
           {image[0] ? (
-            <Image
-            src={builder.image(image && image[0]).width(4160).height(4160).url()} 
-            className={styles.design_image}
-            width={435}
-            height={435} 
-          alt={name}
-          loading="lazy"
-            />
+            <Link href={`/category/${categorySlug}/collections/${collectionSlug}/product/${slug?.current}`}>
+              <Image
+              src={builder.image(image && image[0]).width(4160).height(4160).url()} 
+              className={styles.design_image}
+              width={435}
+              height={435} 
+            alt={name}
+            loading="lazy"
+              />
+            </Link>
           ) : null}
           <div className={styles.design_name}>{name}</div>
           {/* <div className={styles.design_btn}>Product details</div> */}

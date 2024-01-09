@@ -43,7 +43,8 @@ const Navbar = () => {
             <div className={styles.navbar_list}>
               <Link className={styles.no_decoration_text} href={'/'}><ul>Home</ul></Link>
               <Link className={styles.no_decoration_text} href={'/catalog'}><ul>Catalog</ul></Link>
-              <Link className={styles.no_decoration_text} href={'/about-us'}><ul>About</ul></Link>
+              <Link className={styles.no_decoration_text} href={'/about-us'}><ul>Our Story</ul></Link>
+              <Link className={styles.no_decoration_text} href={'/about-us'}><ul>Contact</ul></Link>
               {/* <ul>Catalog</ul>
               <ul>Contact</ul>
               <ul>About</ul> */}
@@ -64,10 +65,10 @@ const Navbar = () => {
           <div className={styles.menu_list}>
           <Link className={styles.no_decoration_text}  href={'/'}><ul onClick={handleMenuToggle}>Home</ul></Link>
               <Link className={styles.no_decoration_text} href={'/catalog'}><ul onClick={handleMenuToggle}>Catalog</ul></Link>
-              <Link className={styles.no_decoration_text} href={'/catalog'}><ul onClick={handleMenuToggle}>Hoodies</ul></Link>
-              <Link className={styles.no_decoration_text} href={'/catalog'}><ul onClick={handleMenuToggle}>Sweat-shirts</ul></Link>
-              <Link className={styles.no_decoration_text} href={'/catalog'}><ul onClick={handleMenuToggle}>Washing Instructions</ul></Link>
-              <Link className={styles.no_decoration_text} href={'/catalog'}><ul onClick={handleMenuToggle}>Contact Us</ul></Link>
+              <Link className={styles.no_decoration_text} href={'/category/hoodies'}><ul onClick={handleMenuToggle}>Hoodies</ul></Link>
+              <Link className={styles.no_decoration_text} href={'/category/crewnecks'}><ul onClick={handleMenuToggle}>Crewnecks</ul></Link>
+              {/* <Link className={styles.no_decoration_text} href={'/catalog'}><ul onClick={handleMenuToggle}>Washing Instructions</ul></Link> */}
+              <Link className={styles.no_decoration_text} href={'/contact'}><ul onClick={handleMenuToggle}>Contact Us</ul></Link>
               <Link className={styles.no_decoration_text} href={'/about-us'}><ul onClick={handleMenuToggle}>Our Story</ul></Link>
           </div>
         </div>
@@ -100,9 +101,9 @@ const Navbar = () => {
         <div className={styles.product_container_cart}>
           {cartItems.length >= 1 && cartItems?.map((item) => (
             <div className={styles.product_cart} key={item._id}>
-              <Image  
+              {/* <Image  
           src={builder.image(item?.image[0]).width(513).height(515).url()} className={styles.cart_product_image} alt={item?.name} width={100}
-          height={90}  loading="lazy" />
+          height={90}  loading="lazy" /> */}
               <div className={styles.item_desc}>
                 <div className={styles.cart_head}>
                   <h5 className={styles.cart_name}>{item?.name}</h5>
@@ -122,9 +123,10 @@ const Navbar = () => {
                     <AiOutlineMinus />
                     </span>
                     <button className={styles.num} onClick="">{item?.quantity}</button>
-                    <span className={styles.plus} onClick={() => toggleCartItemQuanitity(item._id, item.selectedSize, 'inc') }><AiOutlinePlus /></span>
+                    {/* <span className={styles.plus} onClick={() => toggleCartItemQuanitity(item._id, item.selectedSize, 'inc') }><AiOutlinePlus /></span> */}
+                    {item?.quantity != item?.stock ? <span className={styles.plus} onClick={() => toggleCartItemQuanitity(item._id, item.selectedSize, 'inc')}><AiOutlinePlus /></span> : <span className={styles.max} ><AiOutlinePlus /></span>}
                   </div>
-                  <h4 className={styles.cart_price}>${item?.price}</h4>
+                  <h4 className={styles.cart_price}>{item?.price} EGP</h4>
                   </div>
                 </div>
               </div>
@@ -135,7 +137,7 @@ const Navbar = () => {
           <div className={styles.cart_bottom}>
             <div className={styles.total}>
               <h3>Subtotal:</h3>
-              <h3>${totalPrice}</h3>
+              <h3>{totalPrice} EGP</h3>
             </div>
             <div className={styles.btn_container}>
               <Link href="/client-order">

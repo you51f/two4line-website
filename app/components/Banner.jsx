@@ -19,7 +19,7 @@ const Banner = ({sliderImages}) => {
     //     <div className={styles.banner_shirt}></div>
     //   </div>
     // </div>
-    <Carousel className={styles.carousel_main} fade>
+    <Carousel className={styles.carousel_main} fade interval={2500}>
       {images.map((imageData, index) => (
         <Carousel.Item key={index}>
         <img className={styles.carousel_img} src={builder.image(imageData.image && imageData.image[0]).width(1280).height(1280).url()} alt={imageData.name}/>

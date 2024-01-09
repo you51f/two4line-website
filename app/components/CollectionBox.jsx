@@ -13,6 +13,7 @@ const CollectionBox = ({ collection: { _id, image, name, slug }, categorySlug, i
 
   return (
     <AnimatedBox className={styles.animate_box}>
+      <Link href={`/category/${categorySlug}/collections/${slug?.current}`}>
       <div className={styles.collection_box}>
       {image[0] ? (
         <Image
@@ -26,7 +27,7 @@ const CollectionBox = ({ collection: { _id, image, name, slug }, categorySlug, i
       ) : null}
       <div className={collectionInfoClass}>
         <div className={styles.collection_name}>{name}</div>
-        <div className={styles.collection_small_image_box}>
+        {/* <div className={styles.collection_small_image_box}>
           {image?.slice(1, 4).map((item, i) => (
             <Image
               key={i}
@@ -38,12 +39,13 @@ const CollectionBox = ({ collection: { _id, image, name, slug }, categorySlug, i
           loading="lazy"
             />
           ))}
-        </div>
+        </div> */}
         <Link href={`/category/${categorySlug}/collections/${slug?.current}`} className={styles.collection_btn}>
           Shop now
         </Link>
       </div>
     </div>
+      </Link>
     </AnimatedBox>
     
   );
