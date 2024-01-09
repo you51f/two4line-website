@@ -95,7 +95,7 @@ const Product = ({product}) => {
         </select>
         </div>
         {stock <= 4 ? <div className={styles.quantity}>
-        <button type="button" className={styles.no_stock}><PiWarningCircleDuotone/>Only {stock} left</button> 
+        <div  className={styles.no_stock}><PiWarningCircleDuotone/>Only {stock} left</div> 
         </div> : null}
           {/* <h3>Quantity:</h3>
           <p className={styles.quantity_desc}>

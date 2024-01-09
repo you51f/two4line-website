@@ -1087,6 +1087,7 @@
 .add_to_cart:hover {
   background-color: var(--two4line-orange);
   color: #FFFFFF;
+  transform: scale(0.95);
 }
 /* .add_to_cart:active {
   transform: scale(0.95);
@@ -2217,9 +2218,7 @@ padding: 10px 10px;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
   }
-  .add_to_cart:hover {
-    transform: scale(1.05); 
-  }
+ 
   .product_detail_desc .price{
     font-weight: 700 ;
     font-size: 22px;
@@ -2597,9 +2596,7 @@ padding: 10px 10px;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
   }
-  .add_to_cart:hover {
-    transform: scale(1.05); 
-  }
+
   .product_detail_desc .price{
     font-weight: 700 ;
     font-size: 22px;

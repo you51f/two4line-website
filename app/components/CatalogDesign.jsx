@@ -76,7 +76,7 @@ const CatalogDesign = ({product, categorySlug}) => {
               {/* <span className={styles.plus2} onClick={incQty}><AiOutlinePlus /></span> */}
               {/* {qty != stock ? <span className={styles.plus2} onClick={() => toggleCartItemQuanitity(item._id, item.selectedSize, 'inc') }><AiOutlinePlus /></span> : <span className={styles.max} ><AiOutlinePlus /></span>} */}
             {/* </p> */}
-            {stock === 0 ? <button type="button" className={styles.no_stock}><PiWarningCircleDuotone/> Sold Out</button>  : <div className={styles.catalog_btn} onClick={() => handleBuyNow()}>Add to Cart</div>}
+            {stock === 0 ? <div  className={styles.no_stock}><PiWarningCircleDuotone/> Sold Out</div>  : <div className={styles.catalog_btn} onClick={() => handleBuyNow()}>Add to Cart</div>}
             {/* <Link href={`/category/${categorySlug}/collections/${collectionSlug}/product/${slug?.current}`} className={styles.design_btn}>Product details</Link> */}
           </div>
       </div>
