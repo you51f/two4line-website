@@ -49,7 +49,7 @@ const CatalogDesign = ({product, categorySlug}) => {
             <p className={styles.catalog_price}>{price + (sizes && sizes[sizeIndex]?.addedprice || 0)} EGP</p>
             {/* <select
             placeholder='Sizes'
-            className={styles.select_size2}
+            className={styles.select_size2}   
           >
             
             <option key={''} value={''}>M</option>
