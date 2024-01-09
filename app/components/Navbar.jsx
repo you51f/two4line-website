@@ -43,8 +43,8 @@ const Navbar = () => {
             <div className={styles.navbar_list}>
               <Link className={styles.no_decoration_text} href={'/'}><ul>Home</ul></Link>
               <Link className={styles.no_decoration_text} href={'/catalog'}><ul>Catalog</ul></Link>
-              <Link className={styles.no_decoration_text} href={'/about-us'}><ul>Our Story</ul></Link>
-              <Link className={styles.no_decoration_text} href={'/about-us'}><ul>Contact</ul></Link>
+              <Link className={styles.no_decoration_text} href={'/about-us'}><ul>About Us</ul></Link>
+              <Link className={styles.no_decoration_text} href={'/contact'}><ul>Contact</ul></Link>
               {/* <ul>Catalog</ul>
               <ul>Contact</ul>
               <ul>About</ul> */}
@@ -69,7 +69,7 @@ const Navbar = () => {
               <Link className={styles.no_decoration_text} href={'/category/crewnecks'}><ul onClick={handleMenuToggle}>Crewnecks</ul></Link>
               {/* <Link className={styles.no_decoration_text} href={'/catalog'}><ul onClick={handleMenuToggle}>Washing Instructions</ul></Link> */}
               <Link className={styles.no_decoration_text} href={'/contact'}><ul onClick={handleMenuToggle}>Contact Us</ul></Link>
-              <Link className={styles.no_decoration_text} href={'/about-us'}><ul onClick={handleMenuToggle}>Our Story</ul></Link>
+              <Link className={styles.no_decoration_text} href={'/about-us'}><ul onClick={handleMenuToggle}>About Us</ul></Link>
           </div>
         </div>
        

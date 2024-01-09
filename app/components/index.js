@@ -16,4 +16,5 @@ export { default as OrderForm } from "./OrderForm";
 export { default as Collections } from "./Collections";
 export { default as Categories } from "./Categories";
 export { default as Products } from "./Products";
-export { default as MMotionLayout } from "./MotionLayout";
+export { default as MotionLayout } from "./MotionLayout";
+export { default as ContactForm } from "./ContactForm";

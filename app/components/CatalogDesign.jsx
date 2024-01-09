@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { AnimatedBox } from './index';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 import { useStateContext } from '../context/StateContext';
+import { PiWarningCircleDuotone } from "react-icons/pi";
 
 const CatalogDesign = ({product, categorySlug}) => {
     const { _id, image, name,slug, details, price, oldprice, category, sizes, selectedSize } = product;

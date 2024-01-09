@@ -19,7 +19,7 @@ const Footer = () => {
                         <div className={styles.footer_pages_items}>
                         <Link className={styles.no_decoration_text} href={'/'}><ul>Home</ul></Link>
                         <Link className={styles.no_decoration_text} href={'/catalog'}><ul>Catalog</ul></Link>
-                        <Link className={styles.no_decoration_text} href={'/about-us'}><ul>Our Story</ul></Link>
+                        <Link className={styles.no_decoration_text} href={'/about-us'}><ul>About Us</ul></Link>
                         <Link className={styles.no_decoration_text} href={'/contact'}><ul>Contact</ul></Link>
                         {/* <Link className={styles.no_decoration_text} href={'/about-us'}><ul>Washing Instruction</ul></Link> */}
                         </div>

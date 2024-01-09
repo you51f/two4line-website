@@ -13,6 +13,7 @@ const OrderForm = ({fetchedVouchers}) => {
   const [formData, setFormData] = useState({
     name: '',
     address: '',
+    subject: 'An Order from Two4line website',
     phoneNumber: '',
     alternativePhone: '',
     instructions: '',
