@@ -49,6 +49,7 @@ const OrderForm = () => {
         subject: 'A Client Message',
         message: ''
     });
+    setButtonDisabled(false);
 
 
   };
