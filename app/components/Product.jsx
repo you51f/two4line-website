@@ -97,7 +97,7 @@ const Product = ({product}) => {
         {stock <= 4 ? <div className={styles.quantity}>
         <div  className={styles.no_stock}><PiWarningCircleDuotone/>Only {stock} left</div> 
         </div> : null}
-          {/* <h3>Quantity:</h3>
+          {/* <h3>Quantity:</h3>   
           <p className={styles.quantity_desc}>
             <span className={styles.minus} onClick={decQty}><AiOutlineMinus /></span>
             <button className={styles.num}>{qty}</button>
