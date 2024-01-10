@@ -13,16 +13,23 @@ import { PiWarningCircleDuotone } from "react-icons/pi";
 
 
 const Product = ({product}) => {
-  const { _id, image, name, details, price,oldprice, stock, category, sizes, selectedSize } = product;
+  const { _id, image, name, details, price,oldprice, category, sizes, selectedSize, stock } = product;
     const builder = imageUrlBuilder(client);
     const [index, setIndex] = useState(0);
     const [sizeIndex, setSizeIndex] = useState(0);
+    const [sizeStock, setSizeStock] = useState(sizes[0].stock);
     const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
+
+    const handleSizeStock = (selectedIndex) => {
+      setSizeIndex(selectedIndex)
+      setSizeStock(sizes[selectedIndex].stock)
+    }
 
     var sizeNum = 0
     const handleBuyNow = () => {
       const sentProduct = {...product}
       sentProduct.selectedSize = `${sentProduct.sizes && sentProduct.sizes[sizeIndex]?.size}`
+      sentProduct.stock = sizeStock
       sentProduct.price = sentProduct.price + (sentProduct.sizes && sentProduct.sizes[sizeIndex]?.addedprice || 0)
 
       onAdd(sentProduct, qty);
@@ -69,21 +76,14 @@ const Product = ({product}) => {
           </div>
         </div>
 
-        {stock === 0 ?
+        
         <div className={styles.product_detail_desc}>
-          <div className={styles.product_detail_name}>{name}</div>
-        <div className={styles.no_stock}><PiWarningCircleDuotone/> Sold Out</div> 
-        <div className={styles.product_detail_logo_box}>
-          <div className={styles.product_detail_logo}></div>
-        </div>
-      </div>
-        : <div className={styles.product_detail_desc}>
         <div className={styles.product_detail_name}>{name}</div>
         <div className={styles.prices}>{oldprice === 0 ? null : <div className={styles.catalog_price_old}>{oldprice} EGP</div>} <div className={styles.catalog_price}>{price + (sizes && sizes[sizeIndex]?.addedprice || 0)} EGP</div></div>
         <h3 className={styles.size}>Sizes: </h3>
         <div className={styles.size_container}>
         <select
-          onChange={(e) => setSizeIndex(e.target.value)}
+          onChange={(e) => handleSizeStock(e.target.value)}
           className={styles.select_size}
         >
           {
@@ -94,8 +94,8 @@ const Product = ({product}) => {
         }
         </select>
         </div>
-        {stock <= 4 ? <div className={styles.quantity}>
-        <div  className={styles.no_stock}><PiWarningCircleDuotone/>Only {stock} left</div> 
+        {sizeStock <= 4 ? <div className={styles.quantity}>
+        <div  className={styles.no_stock}><PiWarningCircleDuotone/>Only {sizeStock} left</div> 
         </div> : null}
           {/* <h3>Quantity:</h3>   
           <p className={styles.quantity_desc}>
@@ -105,15 +105,20 @@ const Product = ({product}) => {
             {qty != item?.stock ? <span className={styles.plus} onClick={incQty}><AiOutlinePlus /></span> : <span className={styles.max} ><AiOutlinePlus /></span>}
           </p> */}
         {/* </div> */}
+        {sizeStock === 0 ?
+        <div className={styles.no_stock}><PiWarningCircleDuotone/> Sold Out</div> 
+        
+        :  
         <div className={styles.buttons}>
         <div  className={styles.add_to_cart} onClick={() => handleBuyNow()}>Add to Cart</div>
 
         </div>
+        }
         <div className={styles.product_detail_logo_box}>
           <div className={styles.product_detail_logo}></div>
         </div>
       </div>
-      }
+     
       </div>
       {/* <style>{`
         

@@ -355,7 +355,7 @@
   border: none;
   margin-top: 40px;
   text-align: center;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 500;
   
 }
@@ -2218,6 +2218,11 @@ padding: 10px 10px;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
   }
+  .add_to_cart:hover {
+    background-color: var(--two4line-orange);
+    color: #FFFFFF;
+    transform: scale(0.95);
+  }
  
   .product_detail_desc .price{
     font-weight: 700 ;
@@ -2595,6 +2600,11 @@ padding: 10px 10px;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
+  }
+  .add_to_cart:hover {
+    background-color: var(--two4line-orange);
+    color: #FFFFFF;
+    transform: scale(0.95);
   }
 
   .product_detail_desc .price{

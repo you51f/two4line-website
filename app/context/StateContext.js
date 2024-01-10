@@ -72,7 +72,7 @@ export const StateContext = ({ children }) => {
   
     if (checkProductInCart) {
       const updatedCartItems = cartItems.map((cartProduct) => {
-        if (cartProduct._id === product._id && cartProduct.selectedSize === product.selectedSize) {
+        if (cartProduct._id === product._id && cartProduct.selectedSize === product.selectedSize && cartProduct.quantity <= product.stock) {
           return {
             ...cartProduct,
             quantity: cartProduct.quantity + quantity

@@ -14,11 +14,19 @@ const CatalogDesign = ({product, categorySlug}) => {
     const { _id, image, name,slug, details, price, oldprice, stock, category, sizes, selectedSize } = product;
     const builder = imageUrlBuilder(client); 
     const [sizeIndex, setSizeIndex] = useState(0);
+    const [sizeStock, setSizeStock] = useState(sizes[0].stock);
     const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
     var sizeNum = 0
+
+    const handleSizeStock = (selectedIndex) => {
+      setSizeIndex(selectedIndex)
+      setSizeStock(sizes[selectedIndex].stock)
+    }
+
     const handleBuyNow = () => {
       const sentProduct = {...product}
       sentProduct.selectedSize = `${sentProduct.sizes && sentProduct.sizes[sizeIndex]?.size}`
+      sentProduct.stock = sizeStock
       sentProduct.price = sentProduct.price + (sentProduct.sizes && sentProduct.sizes[sizeIndex]?.addedprice || 0)
 
       onAdd(sentProduct, qty);
@@ -57,9 +65,8 @@ const CatalogDesign = ({product, categorySlug}) => {
             <option key={''} value={''}>XL</option>
               
           </select> */}
-          {stock === 0 ? null 
-          : <select
-            onChange={(e) => setSizeIndex(e.target.value)}
+          <select
+            onChange={(e) => handleSizeStock(e.target.value)}
             className={styles.select_size2}
           >
             {
@@ -69,14 +76,14 @@ const CatalogDesign = ({product, categorySlug}) => {
               // <button key={i} onClick={() => {setSizeIndex(i)}}>{item.size}</button>
             })
           }
-          </select>}
+          </select>
           {/* <p className={styles.quantity_desc}> */}
               {/* <span className={styles.minus2} onClick={decQty}><AiOutlineMinus /></span>
               <button className={styles.num}>{qty}</button> */}
               {/* <span className={styles.plus2} onClick={incQty}><AiOutlinePlus /></span> */}
               {/* {qty != stock ? <span className={styles.plus2} onClick={() => toggleCartItemQuanitity(item._id, item.selectedSize, 'inc') }><AiOutlinePlus /></span> : <span className={styles.max} ><AiOutlinePlus /></span>} */}
             {/* </p> */}
-            {stock === 0 ? <div  className={styles.no_stock}><PiWarningCircleDuotone/> Sold Out</div>  : <div className={styles.catalog_btn} onClick={() => handleBuyNow()}>Add to Cart</div>}
+            {sizeStock === 0 ? <div  className={styles.no_stock}><PiWarningCircleDuotone/> Sold Out</div>  : <div className={styles.catalog_btn} onClick={() => handleBuyNow()}>Add to Cart</div>}
             {/* <Link href={`/category/${categorySlug}/collections/${collectionSlug}/product/${slug?.current}`} className={styles.design_btn}>Product details</Link> */}
           </div>
       </div>

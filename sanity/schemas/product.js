@@ -63,6 +63,11 @@ export default {
                 name: 'addedprice',
                 title: 'Added price',
                 type: 'number'
+              },
+              {
+                name: 'stock',
+                title: 'Size stock',
+                type: 'number'
               }
             ]
           }
