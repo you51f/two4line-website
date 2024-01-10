@@ -94,7 +94,7 @@ const Product = ({product}) => {
         }
         </select>
         </div>
-        {sizeStock <= 4 ? <div className={styles.quantity}>
+        {(sizeStock <= 4 && sizeStock != 0) ? <div className={styles.quantity}>
         <div  className={styles.no_stock}><PiWarningCircleDuotone/>Only {sizeStock} left</div> 
         </div> : null}
           {/* <h3>Quantity:</h3>   
