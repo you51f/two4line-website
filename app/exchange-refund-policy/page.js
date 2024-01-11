@@ -31,7 +31,7 @@ const ExchangeRefundPolicy = () => {
         </div>
         <div className={styles.policy_title}>Exchanges</div>
         <div className={styles.policy_points}>
-            <div>- If you would like to exchange an item for a different size, color, or style, please contact our customer service team or visit our nearest store.</div>
+            <div>- If you would like to exchange an item for a different size, color, or style, please contact our customer service team.</div>
         </div>
       </div>
       </div>

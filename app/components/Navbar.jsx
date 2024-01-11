@@ -44,7 +44,7 @@ const Navbar = () => {
               <Link className={styles.no_decoration_text} href={'/'}><ul>Home</ul></Link>
               <Link className={styles.no_decoration_text} href={'/catalog'}><ul>Catalog</ul></Link>
               <Link className={styles.no_decoration_text} href={'/about-us'}><ul>About Us</ul></Link>
-              <Link className={styles.no_decoration_text} href={'/contact'}><ul>Contact</ul></Link>
+              <Link className={styles.no_decoration_text} href={'/contact'}><ul>Contact Us</ul></Link>
               {/* <ul>Catalog</ul>
               <ul>Contact</ul>
               <ul>About</ul> */}
