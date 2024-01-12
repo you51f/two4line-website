@@ -49,7 +49,8 @@ const Footer = () => {
             <div className={styles.footer_evo_text}>
                 Powered by
             </div>
-            <div className={styles.footer_evo_logo}></div>
+            {/* <div className={styles.footer_evo_logo}></div> */}
+            <Link className={styles.footer_evo_logo} href={'https://twitter.com/evoTechSd?t=u3In7S8TfB3tlr9hsjmZSQ&s=35'} target="_blank" attribute></Link>
         </div> 
         <div className={styles.footer_evo}>
             <div className={styles.footer_evo_text}>
