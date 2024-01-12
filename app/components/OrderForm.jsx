@@ -68,6 +68,7 @@ const OrderForm = ({fetchedVouchers}) => {
       totalPrice: totalPrice,
       voucher: selectedVoucher,
       newPrice: newTotal,
+      subject: formData.subject,
       name: formData.name,
       address: formData.address,
       phoneNumber: formData.phoneNumber,
@@ -79,6 +80,7 @@ const OrderForm = ({fetchedVouchers}) => {
     setFormData({
       name: '',
       address: '',
+      subject: 'An Order from Two4line website',
       phoneNumber: '',
       alternativePhone: '',
       instructions: '',
@@ -181,13 +183,13 @@ const OrderForm = ({fetchedVouchers}) => {
               )}
             </div>
             <div>
-              <label htmlFor="totalPrice">Total: ${newTotal} EGP</label>
+              <label htmlFor="totalPrice">Total: {newTotal} EGP</label>
             </div>
             <div className={styles.order_policy}>
               <label className={styles.input_checkbox}>
                   <input type="checkbox" id="policyChecked" name="policyChecked" checked={formData.policyChecked} onChange={handleChange} required />
                   <div>
-                      I have read and agree to the <Link className={styles.policy_link} href={"/exchange-refund-policy"}>Exchange & Refund policy</Link>.
+                      I have read and agree to the Exchange & Refund policy - <Link className={styles.policy_link} href={'/exchange-refund-policy'} target='_blank' >read</Link>
                   </div>
               </label>
             </div>

@@ -37,9 +37,9 @@ const Footer = () => {
                 <div className={styles.footer_social}>
                     <div className={styles.footer_pages_title3}>Follow-Us on Social Media</div>
                         <div className={styles.footer_social_items}>
-                            <Link className={styles.footer_icons} href={'https://www.instagram.com/two4line?igsh=MmVlMjlkMTBhMg=='}><ul><AiOutlineInstagram/></ul></Link>
-                            <Link className={styles.footer_icons} href={''}><ul><AiFillFacebook/></ul></Link>
-                            <Link className={styles.footer_icons} href={'https://www.tiktok.com/@two4line?_t=8icBMfxLFWY&_r=1'}><ul><BiLogoTiktok/></ul></Link>
+                            <Link className={styles.footer_icons} target='_blank' href={'https://www.instagram.com/two4line?igsh=MmVlMjlkMTBhMg=='}><ul><AiOutlineInstagram/></ul></Link>
+                            <Link className={styles.footer_icons} target='_blank'  href={'https://www.facebook.com/share/iTn72EpDk6yAC2Fk/?'}><ul><AiFillFacebook/></ul></Link>
+                            <Link className={styles.footer_icons} target='_blank' href={'https://www.tiktok.com/@two4line?_t=8icBMfxLFWY&_r=1'}><ul><BiLogoTiktok/></ul></Link>
                         </div>
                         <div className={styles.footer_pages_title4}><HiOutlineMail className={styles.footer_email}/> Email: <span>two4line@gmail.com</span></div>
                 </div>  
